@@ -1,0 +1,29 @@
+article {
+	position: relative;
+	//border-left: 1px solid #555;
+	@include content-shadow;
+	padding-left: 1em;
+	padding-right: 1em;
+	overflow: hidden;
+
+	.post-featured-thumbnail {
+		float: left;
+		margin: 0 1em 1em 0;
+		//border: 1px solid red;
+		img {
+			// position: relative;
+			// top: 4px;
+		}
+	}
+	.content-description {
+		float: left;
+	}
+
+}
+
+.entry-header-meta {
+	//border: 1px solid fuchsia;
+	position: relative;
+	top: -28px;
+	text-align: right;
+}

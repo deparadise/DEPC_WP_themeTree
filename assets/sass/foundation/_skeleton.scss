@@ -1,0 +1,12 @@
+// Test styles for plotting Foundation grid layout
+$testPipe: #BC212C;
+
+.row {
+	border: 1px solid green;
+}
+
+.columns {
+	border-right: 1px solid $testPipe;
+	border-bottom: 1px solid $testPipe;
+	background-color: #C2E0E5;
+}

@@ -1,0 +1,41 @@
+// Contact Form 7 override styles
+div.wpcf7 {
+	//border: 1px solid fuchsia;
+	form.wpcf7-form {
+		//background-color: green;
+		p {
+			@include font-1;
+			color: $input-label-color;
+			font-size: 1.25em;
+			letter-spacing: 1px;
+			//border: 1px solid red;
+		}
+		span.wpcf7-form-control-wrap {
+			//border: 1px solid orange;
+			input,
+			textarea {
+				margin: .5em 0 0 0;
+				border-radius: 7px;
+				font-size: 1.2em;
+				letter-spacing: 1px;
+				color: $input-text-color;
+				//background-color: red;
+			}
+			textarea {
+				font-size: 1em;
+				font-family: verdana;
+			}
+		}
+
+		input[type=submit],
+		.wpcf7-submit {
+			@include font-1;
+			font-size: 1.5em;
+			color: #fff;
+			background-color: $solid-red;
+			border: none;
+			border-radius: 7px;
+			padding: 0 12px;
+		}
+	}
+}

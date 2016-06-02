@@ -1,0 +1,51 @@
+.social-CTA {
+	padding: 0 1em 0 1em;
+	color: #fff;
+	.row {
+		//text-align: center;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+	a {
+		text-align: center;
+		color: $solid-red;
+		text-decoration: none;
+	}
+	ul {
+		list-style: none;
+		li {
+			//float: left;
+		}
+	}
+	.social-links {
+		a {
+			position: relative;
+		    display: block;
+		    width: 60px;
+		    height: 60px;
+		    margin: 0 auto 0;
+		    border-radius: 30px;
+		    font-size: 50px;
+		}
+		a::before {
+			position: absolute;
+			top: 5px;
+			left: 12px;
+			//border: 1px solid fuchsia;
+		}
+	}
+	//border: 1px solid red;
+}
+
+@media only screen and (min-width: 40.0625em) {
+	.social-CTA {
+		position: relative;
+		float: left;
+		clear: left;
+		width: 41.66667%;
+		left: 50%;
+		right: auto;
+		top: 45px;
+	}
+}

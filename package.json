@@ -1,0 +1,20 @@
+{
+  "name": "depc_styro",
+  "version": "0.0.1",
+  "description": "My starter theme for DEPC WordPress projects",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "David Pineda",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^1.2.5",
+    "gulp-jshint": "^1.11.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-uglify": "^1.4.1",
+    "gulp-util": "^3.0.6"
+  }
+}

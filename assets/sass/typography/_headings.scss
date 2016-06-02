@@ -1,0 +1,36 @@
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	@include font-1;
+	font-size: 1.5em;
+}
+
+h1 {
+	font-size: 2em;
+	color: $solid-red;
+	//border: 1px solid red;
+}
+
+h2 {
+	font-size: 1.8em;
+	color: $solid-red;
+	//border: 1px solid green;
+}
+
+h3 {
+	//border: 1px solid blue;
+}
+
+h4 {
+	color: #aaa;
+	//border: 1px solid orange;
+}
+
+h5 {
+	color: #ccc;
+	//border: 1px solid fuchsia;
+}
+
+h6 {
+	color: #eee;
+	//border: 1px solid #bada55;
+}

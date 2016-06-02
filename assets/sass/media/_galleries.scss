@@ -1,0 +1,40 @@
+.gallery {
+	overflow: hidden;
+	margin-bottom: 1.5em;
+	padding: 2em 2em;
+	//border: 1px solid red;
+	figure.gallery-item {
+		float: left;
+		height: 150px;
+
+		//border-radius: 80px;
+		overflow: hidden;
+		//border: 1px solid blue;
+		.gallery-icon {
+			padding: 0;
+			//border: 1px solid fuchsia;
+			a {
+				//border: 1px solid red;
+				img {
+					//margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+.gallery-caption {
+	display: block;
+}
+
+
+/// LIGHT BOX
+.gallery-lightbox-container {
+	//background-color: red;
+
+	// plugins > fancy-gallery > classes > mocking-bird.php: Ln_101
+	#branding {
+		display: none !important;
+		border: 1px solid fuchsia;
+	}
+}

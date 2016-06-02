@@ -1,0 +1,26 @@
+{
+  "name": "DEPC_Styro",
+  "version": "0.0.1",
+  "homepage": "https://github.com/deparadise/DEPC_styro",
+  "authors": [
+    "David Pineda <davidep@deparadise.com>"
+  ],
+  "description": "DEPC Wordpress starter theme",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "jQuery#~2.1.4",
+    "slick-carousel": "slick.js#~1.5.8",
+    "angular": "~1.4.7",
+    "foundation": "~5.5.3"
+  }
+}

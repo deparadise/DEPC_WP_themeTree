@@ -1,0 +1,41 @@
+// Extension classes
+.block-spacing {
+	margin: 0 0 2em;
+}
+
+// STRUCTURE
+#page.site {
+	position: relative;
+	overflow: hidden;
+}
+
+#content.site-content {
+	@extend .block-spacing;
+}
+
+	.featured-window {
+		@extend .block-spacing;
+	}
+
+	#primary.content-area {
+		@extend .block-spacing;
+		margin-top: 2em;
+		//@include content-shadow;
+	}
+
+#colophon.site-footer {
+	//@extend .block-spacing;
+	text-align: center;
+	.columns {
+		padding: 0;
+	}
+	.site-info {
+		padding: .5em 0;
+		background-color: $solid-red;
+		color: #fff;
+		font-family: Oswald;
+		font-size: 1.15em;
+	}
+}
+
+@import "DEPCbug";

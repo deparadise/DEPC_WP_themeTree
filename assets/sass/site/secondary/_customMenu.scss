@@ -1,0 +1,37 @@
+// Custom Menu widget styles
+.widget_nav_menu {
+	margin: 0 0 1em 0;
+	//border: 1px solid fuchsia;
+	div {
+		position: relative;
+		max-width: 100%;
+		//border: 1px solid green;
+		ul {
+			overflow: hidden;
+			margin: 0;
+			li {
+				margin: 0;
+				a {
+					max-width: 400px;
+					display: block;
+					text-align: center;
+					font-size: 1.5em;
+					font-family: Oswald;
+					color: $solid-red;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 40.0625em) {
+	.widget_nav_menu {
+		position: relative;
+		float: left;
+		clear: right;
+		width: 41.66667%;
+		height: 20px;
+		left: 10%;
+		right: auto;
+	}
+}

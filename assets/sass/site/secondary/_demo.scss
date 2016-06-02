@@ -1,0 +1,17 @@
+.demo {
+	text-align: center;
+	//background-color: fuchsia;
+	.row {
+		padding: 0 0 .5em 0;
+	}
+	.video {
+		iframe {
+			width: 95%;
+			height: 250px;
+		}
+	}
+}
+
+.partners-display {
+	text-align: center;
+}

@@ -1,0 +1,142 @@
+/*!
+Theme Name: WreckCheck
+Theme URI: http://gotbac.com/
+Author: David Pineda
+Author URI: http://www.deparadise.com/
+Description: Event Enhancement Specialists
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: DEPC_WP_themes
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+The WreckCheck theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+    ## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Foundation
+--------------------------------------------------------------*/
+//@import "foundation/skeleton";
+@import "foundation/settings";
+@import "foundation/override";
+@import "foundation/assets";
+/*--------------------------------------------------------------
+# Start-up styles
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Compass
+--------------------------------------------------------------*/
+//@import "normalize";
+@import"compass";
+@import"compass/reset";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+//@import "forms/forms";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+@import "layout/page";
+@import "layout/featured-window";
+@import "layout/content";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+.screen-reader-text {
+	display: none;
+}
+//@import "modules/accessibility"; ??
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+//@import "modules/alignments"; ??
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+//@import "modules/clearings"; ??
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
+@import "site/secondary/social-CTA";
+@import "site/secondary/demo";
+@import "site/secondary/roleCall";
+@import "site/secondary/customMenu";
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+//@import "site/site";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+//@import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+/*--------------------------------------------------------------
+# _underscores UI overides
+--------------------------------------------------------------*/
+//@import "underscores/override";
+
+/*--------------------------------------------------------------
+# Plugin overides
+--------------------------------------------------------------*/
+@import "plugins/wpcf7";

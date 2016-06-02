@@ -1,0 +1,154 @@
+// #masthead
+nav.site-header.expanded {
+	.main-navigation {
+		ul.main-nav {
+			display: block;
+			li {
+				width: 100%;
+				border-top: 1px solid #222;
+			}
+		}
+	}
+}
+
+nav.site-header {
+	// default WP menu
+	.main-navigation .menu ul {
+		display: none;
+		//border:  1px solid fuchsia;
+	}
+	// FOUNDATION WP menu
+}
+nav.site-header.expanded  {
+	.main-navigation .menu ul {
+		display: block;
+	}
+}
+
+nav.site-header {
+	position: absolute;
+	z-index: 9999;
+	width: 100%;
+	top: 35px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	background-color: $transparent-red;
+	font-family: Oswald;
+	overflow: visible;
+	.toggle-topbar.menu-icon a {
+		height: 45px;
+		top: -7px;
+		//border: 1px solid fuchsia;
+		span::after {
+			width: 25px;
+			top: 53%;
+			//border: 2px solid red;
+		}
+	}
+	ul.site-branding {
+		display: block;
+		li {
+			h1 {
+				a {
+					width: 300px !important;
+					//border: 1px solid #bada55;
+				}
+				.logo {
+					position: absolute;
+					top: -35px;
+					width: 85px;
+					//border: 1px solid fuchsia;
+				}
+				.logo-type {
+					position: absolute;
+					top: -2px;
+					left: 95px;
+					height: 50px;
+					//border: 1px solid orange;
+				}
+			}
+		}
+	}
+	ul.main-nav {
+		display: none;
+		li {
+			a {
+				position: relative;
+				font-size: 1.15em;
+				font-family: Oswald;
+			}
+			ul.sub-menu {
+				padding-left: 1.5em;
+				//border: 1px solid fuchsia;
+			}
+		}
+	}
+}
+
+// DESKTOP .main-nav
+@media only screen and (min-width: 40.0625em) {
+	nav.site-header {
+		//display: none;
+		//background-color: green;
+		ul.main-nav {
+			position: relative;
+			top: -1px;
+			display: block;
+			padding: 0 5em 0 0;
+			li {
+				background: none;
+				a {
+					font-size: 1.15em;
+					background: none;
+				}
+				ul.sub-menu {
+					position: absolute;
+					padding-left: 0;
+					display: none;
+					//border: 1px solid orange;
+					li {
+						clear: left;
+						a {
+							background-color: $solid-red;
+						}
+						a:after {
+							content: none;
+						}
+					}
+				}
+			}
+			li.menu-item-has-children:hover ul.sub-menu {
+				display: block;
+			} 
+			li.menu-item-has-children a:after {
+				position: relative;
+				float: right;
+				top: 25px;
+				right: -7px;
+				border: 5px inset;
+				content: "";
+				display: block;
+				height: 0;
+				width: 0;
+				border-color: rgba(255,255,255,.4) transparent transparent;
+				border-top-style: solid;
+				margin-top: -2.5px;
+			}
+		}
+	}
+	.top-bar-section li:not(.has-form) a:not(.button) {
+		background: none;
+	}
+}
+
+// Nav States
+// Sub Menu
+
+// parent nav item hover
+.top-bar-section ul li:hover:not(.has-form)>a {
+	background-color: $solid-red;
+}
+// child nav item hover
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+	background-color: $solid-red;
+}
