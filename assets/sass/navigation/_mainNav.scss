@@ -25,6 +25,10 @@ nav.site-header.expanded  {
 	}
 }
 
+nav.site-header.top-bar.expanded {
+	position: relative;
+	height: 115px;
+}
 nav.site-header {
 	position: absolute;
 	z-index: 9999;
@@ -73,6 +77,8 @@ nav.site-header {
 		}
 	}
 	ul.main-nav {
+		margin: 70px 0 0 0;
+		border-bottom: 1px solid #777;
 		display: none;
 		li {
 			a {
