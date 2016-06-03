@@ -86,10 +86,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
-@import "layout/page";
 @import "layout/featured-window";
+@import "layout/page";
 @import "layout/content";
-
+@import "layout/footer";
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/

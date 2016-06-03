@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer row" role="contentinfo">
 		<div class="small-12 columns">
 			<div class="site-info">
-				&copy; <?php echo date('Y'); ?> Wreck Check. All Rights Reserved.
+				&copy; <?php echo date('Y'); ?> Unique Impressions Promotionals. All Rights Reserved.
 			</div>
 			<!-- DEPC Bug -->
 			<div class="DEPC-bug">

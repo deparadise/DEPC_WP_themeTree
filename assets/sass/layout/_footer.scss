@@ -1,0 +1,19 @@
+#colophon.site-footer {
+	//@extend .block-spacing;
+	text-align: center;
+	.columns {
+		padding: 0;
+	}
+	.site-info {
+		padding: .5em 0 0 1em;
+		background-color: $color__background-body;
+		color: #fff;
+		font-family: $font__main;
+		text-align: left;
+		font-size: 1em;
+		font-weight: 300;
+
+	}
+}
+
+@import "DEPCbug";
