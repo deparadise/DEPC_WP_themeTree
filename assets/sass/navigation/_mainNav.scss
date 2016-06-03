@@ -34,7 +34,7 @@ nav.site-header {
 	//border-top: 1px solid white;
 	border-bottom: 1px solid #777;
 	background-color: #444;
-	font-family: Oswald;
+	font-family: $font__main;
 	overflow: visible;
 	//border: 1px solid fuchsia;
 	.toggle-topbar.menu-icon a {
@@ -78,7 +78,7 @@ nav.site-header {
 			a {
 				position: relative;
 				font-size: 1.15em;
-				font-family: Oswald;
+				font-family: $font__main;
 			}
 			ul.sub-menu {
 				padding-left: 1.5em;
