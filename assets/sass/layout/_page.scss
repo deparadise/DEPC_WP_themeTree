@@ -22,20 +22,3 @@
 		margin-top: 2em;
 		//@include content-shadow;
 	}
-
-#colophon.site-footer {
-	//@extend .block-spacing;
-	text-align: center;
-	.columns {
-		padding: 0;
-	}
-	.site-info {
-		padding: .5em 0;
-		background-color: $solid-red;
-		color: #fff;
-		font-family: $font__main;
-		font-size: 1.15em;
-	}
-}
-
-@import "DEPCbug";
