@@ -33,7 +33,7 @@ nav.site-header {
 	border-top: 1px solid white;
 	border-bottom: 1px solid white;
 	background-color: $transparent-red;
-	font-family: Oswald;
+	font-family: $font__main;
 	overflow: visible;
 	.toggle-topbar.menu-icon a {
 		height: 45px;
@@ -75,7 +75,7 @@ nav.site-header {
 			a {
 				position: relative;
 				font-size: 1.15em;
-				font-family: Oswald;
+				font-family: $font__main;
 			}
 			ul.sub-menu {
 				padding-left: 1.5em;
