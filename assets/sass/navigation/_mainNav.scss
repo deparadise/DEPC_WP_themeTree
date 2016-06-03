@@ -78,6 +78,7 @@ nav.site-header {
 			a {
 				position: relative;
 				font-size: 1.15em;
+				letter-spacing: 1px;
 				font-family: $font__main;
 				font-weight: 300;
 			}
@@ -97,10 +98,14 @@ nav.site-header {
 		//background-color: green;
 		ul.main-nav {
 			position: relative;
+			width: 200px;
 			top: -1px;
 			display: block;
-			padding: 0 5em 0 0;
+			padding: 0 0 0 0;
+			//border: 1px solid fuchsia;
 			li {
+				position: relative;
+				float: none;
 				background: none;
 				a {
 					font-size: 1.15em;
@@ -108,6 +113,9 @@ nav.site-header {
 				}
 				ul.sub-menu {
 					position: absolute;
+					top: 0px;
+					right: 200px;
+					width: 200px;
 					padding-left: 0;
 					display: none;
 					//border: 1px solid orange;
