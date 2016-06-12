@@ -29,6 +29,12 @@
 	box-shadow: 2px 4px 20px #222;
 }
 
+@mixin content-h-rules($border-color:#777) {
+	padding: 1em 0;
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
+}
+
 @mixin text-shadows {
 	text-shadow: 3px 3px 10px #555;
 }
