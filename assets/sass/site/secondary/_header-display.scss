@@ -1,0 +1,14 @@
+#secondary-hd {
+	background: #000;
+	letter-spacing: 1px;
+	font-weight: 300;
+	//border: 1px solid green;
+	aside {
+		float: left;
+		//border: 1px solid fuchsia;
+	}
+	aside:last-child {
+		float: right;
+		//border: 1px solid blue;
+	}
+}

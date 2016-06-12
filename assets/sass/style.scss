@@ -111,6 +111,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
+@import "site/secondary/header-display";
+
 @import "site/secondary/widgets";
 @import "site/secondary/social-CTA";
 @import "site/secondary/demo";
@@ -119,7 +121,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-//@import "site/site";
+//@import "site/site"; // For Reference
 
 /*--------------------------------------------------------------
 # Infinite scroll
