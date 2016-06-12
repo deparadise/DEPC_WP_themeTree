@@ -1,7 +1,7 @@
 .widget-area {
 	overflow: hidden;
 	padding: 1em;
-	background-color: $solid-red;
+	//background-color: $solid-red;
 	color: #fff;
 	//border-radius: $box-radius 0 $box-radius 0;
 	h1, h2, h3, h4, h5, h6 {
@@ -25,10 +25,16 @@
 	}
 
 	a {
-		background-color: #fff;
-		color: #777;
-		padding: .35em;
-		border-radius: 5px;
+		//background-color: #444;
+		color: #aaa;
+		letter-spacing: 1px;
+		font-weight: 300;
+		padding: .2em .7em;
+		border: 1px solid #aaa;
+		//border-radius: 5px;
+	}
+	a:hover {
+		color: #fff;
 	}
 
 	/// WTF!!!
