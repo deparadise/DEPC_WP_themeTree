@@ -125,9 +125,10 @@ nav.site-header {
 					width: 200px;
 					padding-left: 0;
 					display: none;
+					z-index: 1;
 					//border: 1px solid orange;
 					li {
-						clear: left;
+						width: 175px;
 						a {
 							background-color: $solid-red;
 						}
@@ -136,8 +137,14 @@ nav.site-header {
 						}
 					}
 				}
+				ul.sub-menu ul.sub-menu {
+					display: none;
+					top: 0px;
+					left: -175px;
+					//border: 1px solid orange;
+				}
 			}
-			li.menu-item-has-children:hover ul.sub-menu {
+			li.menu-item-has-children:hover > ul.sub-menu {
 				display: block;
 			} 
 			li.menu-item-has-children a:after {
@@ -153,6 +160,21 @@ nav.site-header {
 				border-color: rgba(255,255,255,.4) transparent transparent;
 				border-top-style: solid;
 				margin-top: -2.5px;
+			}
+			li.menu-item-has-children ul.sub-menu li.menu-item-has-children > a:before{
+				position: relative;
+				float: left;
+				border: 5px inset;
+				content: "";
+				display: block;
+				height: 0;
+				width: 0;
+				top: 18px;
+				left: -5px;
+				border-color: rgba(255,255,255,.4) transparent transparent;
+				border-top-style: solid;
+				transform: rotate(90deg);
+				//border: 1px solid green;
 			}
 		}
 	}
