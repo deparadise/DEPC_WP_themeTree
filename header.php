@@ -27,6 +27,8 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'depc' ); ?></a>
 
+	<?php get_sidebar('header-display');?>
+
 	<!-- FOUNDATION TOPBAR responsive nav -->
 	<nav id="masthead" class="site-header top-bar row" data-topbar>
 		<ul class="site-branding title-area">

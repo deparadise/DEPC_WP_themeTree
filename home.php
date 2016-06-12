@@ -15,7 +15,8 @@
 get_header(); ?>
 
 <?php get_template_part('template-parts/content', 'featuredWindow'); ?>
-<?php get_sidebar('presentation'); ?>
+
+<?php get_sidebar('presentation-1'); ?>
 
 	<div id="primary" class="content-area page-template row">
 		<main id="main" class="site-main" role="main">
@@ -35,6 +36,8 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
+<?php get_sidebar('presentation-2'); ?>
 
 <?php get_template_part('template-parts/widget', 'roleCall'); ?>
 
