@@ -2,6 +2,7 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	@include font-1;
 	font-size: 1.5em;
+	font-weight: 300;
 }
 
 h1 {
@@ -17,11 +18,12 @@ h2 {
 }
 
 h3 {
+	color: #aaa;
 	//border: 1px solid blue;
 }
 
 h4 {
-	color: #aaa;
+	color: #bbb;
 	//border: 1px solid orange;
 }
 
