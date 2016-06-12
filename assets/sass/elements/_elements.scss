@@ -11,6 +11,7 @@ html {
 body {
 	overflow-x: hidden;
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	background-image: url("assets/imgs/concrete.png");
 }
 
 blockquote, q {
