@@ -124,11 +124,12 @@ nav.site-header {
 					right: 200px;
 					width: 200px;
 					padding-left: 0;
+					padding-right: 2px;
 					display: none;
 					z-index: 1;
 					//border: 1px solid orange;
 					li {
-						width: 175px;
+						//width: 175px;
 						a {
 							background-color: $solid-red;
 						}
@@ -140,7 +141,7 @@ nav.site-header {
 				ul.sub-menu ul.sub-menu {
 					display: none;
 					top: 0px;
-					left: -175px;
+					left: -200px;
 					//border: 1px solid orange;
 				}
 			}
