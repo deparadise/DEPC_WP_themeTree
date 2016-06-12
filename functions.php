@@ -99,19 +99,39 @@ add_action( 'after_setup_theme', 'depc_content_width', 0 );
  */
 function depc_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Presentation', 'depc' ),
-		'id'            => 'present-1',
-		'description'   => 'Inline before the content',
+		'name'          => esc_html__( 'Header Display', 'depc' ),
+		'id'            => 'header-display',
+		'description'   => 'above the main navigation',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-		
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Presentation One', 'depc' ),
+		'id'            => 'presentation-1',
+		'description'   => 'before the content',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Presentation Two', 'depc' ),
+		'id'            => 'presentation-2',
+		'description'   => 'after the content',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	
+	// Misc. other widget area or template	
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'depc' ),
 		'id'            => 'sidebar-1',
-		'description'   => '',
+		'description'   => 'Misc. other widget area or template',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
