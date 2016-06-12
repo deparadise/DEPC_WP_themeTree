@@ -13,7 +13,7 @@ if ( ! is_active_sidebar( 'presentation-1' ) ) {
 ?>
 
 <div id="secondary-p1" class="widget-area presentation row" role="complementary">
-	<div class="columns medium-8 medium-push-2">
+	<div class="columns medium-10 medium-push-1">
 		<?php dynamic_sidebar( 'presentation-1' ); ?>
 	</div>
 </div><!-- #secondary -->
