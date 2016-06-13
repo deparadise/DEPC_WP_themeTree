@@ -49,5 +49,5 @@ node_modules
 bower_components
 
 # Dynamic build components
-style.css
+# style.css
 # assets/js/allScript.js
