@@ -12,7 +12,12 @@
 			font-size: 1.25em;
 			line-height: 1em;
 			font-weight: 400;
-			color: $transparent-red;
+			color: $solid-red;
+			padding-bottom: .25em;
+		}
+		address {
+			margin: 0 0 .5em;
+			//border: 1px solid fuchsia;
 		}
 	}
 	aside:last-child {
