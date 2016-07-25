@@ -6,12 +6,34 @@
 	<?php // DEPC todo: account for archive template
 	if(is_front_page()) {
 	
-		echo get_the_post_thumbnail($page->ID, 'full');
+		if ( function_exists('ACF') ) {
+			if (get_field('simple_slider') && is_page_template('home.php')) {
+				$url_collection = get_field('simple_slider');
+				$url_collection = str_getcsv($url_collection, ",");
 
-		?>
-		<span class="img-screen"></span>
-		<?php
-		
+				?>
+					<span>
+						<?php
+							// TEST DISPLAY OUTPUT FROM ACF TO TEMPLATE
+							//print_r ($url_collection)
+						?>
+					</span>
+
+					<div class="simple-slider">
+						<?php foreach($url_collection as $index=>$url) { ?>
+							<div><img src="<?php echo $url?>"></div>
+						<?php } ?>
+					</div>
+				<?php
+			} else {
+				echo get_the_post_thumbnail($page->ID, 'full');
+				?> <span class="img-screen"></span> <?php
+			}
+		} else {
+			echo get_the_post_thumbnail($page->ID, 'full');
+			?> <span class="img-screen"></span> <?php
+		}
+
 		if ( function_exists('ACF') ) {
 			if (get_field('tagline') && is_page_template('home.php')) {
 

@@ -2273,69 +2273,69 @@ nav.site-header ul.main-nav li ul.sub-menu {
 /* line 22, assets/sass/layout/_featured-window.scss */
 .featured-window .entry-header, .featured-window .home-page-header {
   position: absolute;
-  bottom: 0px;
+  bottom: 50px;
   color: #fff;
 }
-/* line 26, assets/sass/layout/_featured-window.scss */
+/* line 27, assets/sass/layout/_featured-window.scss */
 .featured-window .entry-header h1, .featured-window .home-page-header h1 {
   color: #fff;
   font-size: 3em;
-  padding: 0 0 .25em .5em;
+  padding: 0 .5em;
   letter-spacing: 2px;
   text-shadow: 3px 3px 10px #555;
 }
 
 @media only screen {
-  /* line 40, assets/sass/layout/_featured-window.scss */
+  /* line 41, assets/sass/layout/_featured-window.scss */
   .featured-window img {
     max-width: 200%;
     height: auto;
-    width: 160%;
+    width: 140%;
   }
 
-  /* line 46, assets/sass/layout/_featured-window.scss */
+  /* line 47, assets/sass/layout/_featured-window.scss */
   .single .featured-window {
     height: 400px;
   }
-  /* line 48, assets/sass/layout/_featured-window.scss */
+  /* line 49, assets/sass/layout/_featured-window.scss */
   .single .featured-window img {
     position: relative;
     top: 0px;
   }
 }
 @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
-  /* line 58, assets/sass/layout/_featured-window.scss */
+  /* line 59, assets/sass/layout/_featured-window.scss */
   .featured-window img {
     max-width: 300%;
     width: 100%;
     height: auto;
   }
 
-  /* line 65, assets/sass/layout/_featured-window.scss */
+  /* line 66, assets/sass/layout/_featured-window.scss */
   .single .featured-window img {
     top: 0px;
   }
 }
 @media only screen and (min-width: 64.0625em) {
-  /* line 72, assets/sass/layout/_featured-window.scss */
+  /* line 73, assets/sass/layout/_featured-window.scss */
   .featured-window {
     height: 500px;
   }
-  /* line 74, assets/sass/layout/_featured-window.scss */
+  /* line 75, assets/sass/layout/_featured-window.scss */
   .featured-window img {
     width: 100%;
   }
 
-  /* line 79, assets/sass/layout/_featured-window.scss */
+  /* line 80, assets/sass/layout/_featured-window.scss */
   .single .featured-window img {
     top: -200px;
   }
 }
-/* line 87, assets/sass/layout/_featured-window.scss */
+/* line 88, assets/sass/layout/_featured-window.scss */
 .archive .featured-window {
   height: 200px;
 }
-/* line 89, assets/sass/layout/_featured-window.scss */
+/* line 90, assets/sass/layout/_featured-window.scss */
 .archive .featured-window .page-title {
   position: relative;
   top: 80px;
@@ -2711,6 +2711,36 @@ object {
 .gallery-lightbox-container #branding {
   display: none !important;
   border: 1px solid fuchsia;
+}
+
+/* line 1, assets/sass/media/_simple-slider.scss */
+.simple-slider {
+  background-color: #777;
+  height: 100%;
+}
+/* line 5, assets/sass/media/_simple-slider.scss */
+.simple-slider .slick-arrow {
+  z-index: 1;
+  position: absolute;
+  bottom: -20px;
+  padding: .5em;
+}
+/* line 11, assets/sass/media/_simple-slider.scss */
+.simple-slider .slick-prev {
+  left: 0px;
+}
+/* line 14, assets/sass/media/_simple-slider.scss */
+.simple-slider .slick-next {
+  right: 0px;
+}
+/* line 18, assets/sass/media/_simple-slider.scss */
+.simple-slider .slick-list {
+  height: 100%;
+}
+/* line 22, assets/sass/media/_simple-slider.scss */
+.simple-slider .slick-slide {
+  height: 100%;
+  background-color: #333;
 }
 
 /*--------------------------------------------------------------
