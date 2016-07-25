@@ -21,6 +21,10 @@
 
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700|Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+<!-- TEMP libraries: TODO: Make library and asset inclusion by gulp -->
+<script src="<?php bloginfo('template_url');?>/assets/libs/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url');?>/assets/libs/slick.css"/>
 </head>
 
 <body <?php body_class(); ?>>
