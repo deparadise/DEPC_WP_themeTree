@@ -1,6 +1,3 @@
-// Foundation configuration (ha ha that rhymed...)
-$(document).foundation();
-//console.log('mainNav.js loaded!');
 console.log('simple slider controller loaded!');
 
 $(document).ready(function(){
