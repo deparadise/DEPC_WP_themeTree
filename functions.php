@@ -203,6 +203,8 @@ require get_template_directory() . '/func_modules/event_post_type.php';
 /* User Admin Menu Control */
 require get_template_directory() . '/func_modules/admin_menu_control.php';
 
+/// ACF CONTENT SUPPORT MODULES
+
 /* ACF: Tagline */
 require get_template_directory() . '/func_modules/ACF_tagline.php';
 
@@ -211,6 +213,9 @@ require get_template_directory() . '/func_modules/ACF_partners_display.php';
 
 /* ACF: Event Date */
 require get_template_directory() . '/func_modules/ACF_event_date.php';
+
+/* ACF: Simple Slider */
+require get_template_directory() . '/func_modules/ACF_simple_slider.php';
 
 
 
