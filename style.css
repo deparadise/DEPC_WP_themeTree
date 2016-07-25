@@ -2723,21 +2723,24 @@ object {
   z-index: 1;
   position: absolute;
   bottom: -20px;
-  padding: .5em;
+  padding: 0 .5em;
+  background-color: rgba(219, 219, 219, 0.5);
+  color: #fff;
+  font-size: 25px;
 }
-/* line 11, assets/sass/media/_simple-slider.scss */
+/* line 14, assets/sass/media/_simple-slider.scss */
 .simple-slider .slick-prev {
   left: 0px;
 }
-/* line 14, assets/sass/media/_simple-slider.scss */
+/* line 17, assets/sass/media/_simple-slider.scss */
 .simple-slider .slick-next {
   right: 0px;
 }
-/* line 18, assets/sass/media/_simple-slider.scss */
+/* line 21, assets/sass/media/_simple-slider.scss */
 .simple-slider .slick-list {
   height: 100%;
 }
-/* line 22, assets/sass/media/_simple-slider.scss */
+/* line 25, assets/sass/media/_simple-slider.scss */
 .simple-slider .slick-slide {
   height: 100%;
   background-color: #333;
