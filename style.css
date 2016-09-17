@@ -2258,7 +2258,6 @@ nav.site-header ul.main-nav li ul.sub-menu {
 /* line 1, assets/sass/layout/_featured-window.scss */
 .featured-window {
   position: relative;
-  height: 400px;
   overflow: hidden;
 }
 /* line 13, assets/sass/layout/_featured-window.scss */
@@ -2319,7 +2318,7 @@ nav.site-header ul.main-nav li ul.sub-menu {
 @media only screen and (min-width: 64.0625em) {
   /* line 73, assets/sass/layout/_featured-window.scss */
   .featured-window {
-    height: 500px;
+    max-height: 800px;
   }
   /* line 75, assets/sass/layout/_featured-window.scss */
   .featured-window img {
@@ -2722,7 +2721,7 @@ object {
 .simple-slider .slick-arrow {
   z-index: 1;
   position: absolute;
-  bottom: -20px;
+  top: 340px;
   padding: 0 .5em;
   background-color: rgba(219, 219, 219, 0.5);
   color: #fff;

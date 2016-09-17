@@ -1,8 +1,8 @@
 .featured-window {
 	position: relative;
-	height: 400px;
+	// height: 400px;
 	overflow: hidden;
-	//border: 1px solid fuchsia;
+	// border: 1px solid fuchsia;
 	img {
 		// During mobile
 		//height: 400px; 
@@ -71,7 +71,7 @@
 
 @media #{$large-up} {
 	.featured-window {
-		height: 500px;
+		max-height: 800px;
 		img {
 			width: 100%;
 		}
