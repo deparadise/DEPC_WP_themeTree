@@ -23,7 +23,13 @@
 	}
 
 	.slick-slide {
-		height: 100%;
+		position: relative;
+		height: 700px;
 		background-color: #333;
+		img {
+			margin: 0 auto;
+			height: 100%;
+			width: auto;
+		}
 	}
 }

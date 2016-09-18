@@ -2318,7 +2318,7 @@ nav.site-header ul.main-nav li ul.sub-menu {
 @media only screen and (min-width: 64.0625em) {
   /* line 73, assets/sass/layout/_featured-window.scss */
   .featured-window {
-    max-height: 800px;
+    max-height: 700px;
   }
   /* line 75, assets/sass/layout/_featured-window.scss */
   .featured-window img {
@@ -2741,8 +2741,15 @@ object {
 }
 /* line 25, assets/sass/media/_simple-slider.scss */
 .simple-slider .slick-slide {
-  height: 100%;
+  position: relative;
+  height: 700px;
   background-color: #333;
+}
+/* line 29, assets/sass/media/_simple-slider.scss */
+.simple-slider .slick-slide img {
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
 }
 
 /*--------------------------------------------------------------
