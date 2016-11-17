@@ -12,9 +12,29 @@ $(document).ready(function() {
 				return cb();
 			}
 		},
+		setMainNavBehaviorOn: function(trigger, seriesCB) {
+			//console.log('test trigger:', trigger);
+			var targetMenu = $(trigger).children('.sub-menu');
+			// $(targetMenu).css({
+			// 	'display' : 'none'//,
+			// 	//'opacity' : '0'//,
+			// 	//height
+			// 	//'border' : '1px solid green'
+			// });
 
-		if (cb) {
-			return cb();
+			$(trigger).hover(
+				function() {
+					//$(this).css('border','1px solid blue');
+					$(targetMenu).css('display', 'none').fadeIn();
+				},
+				function() {
+					//$(this).css('border','1px solid fuchsia');
+					$(targetMenu).css('display', 'block').fadeOut();
+				}
+			);
+
+			return seriesCB(null);
+		},
 		}
 	}
 
