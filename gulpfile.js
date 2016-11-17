@@ -48,11 +48,9 @@
 	// Designate dev js files
 	var scriptSources = ['assets/jsDev/*.js']; 
 	//  Designate dev php files
-/// GULP PIPE FUNCTIONS
-	// static >>> all php static files pipe
-	gulp.task('static', function(){
-		gulp.src(staticSources)
-		.pipe(livereload())
+	var staticTemplates = ['./**/*.php'];
+
+
 	});
 
 	// compass >>> Styles pipe
