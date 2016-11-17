@@ -69,21 +69,24 @@
 	});
 
 
-		.pipe(gulp.dest('.'))
-		.pipe(livereload())
+// CHECK JS
+	gulp.task('check_js', function(){
+		return gulp.src(scriptSources)
+		.pipe(cache('linting'))
+		.pipe(jsHint())
+		.pipe(jsHint.reporter(stylish));
 	});
 
-	// js >>> Script files pipe
-	gulp.task('js', function(){
-		gulp.src(jsSources)
-		
-		.pipe(jsHint())
-		.pipe(jsHint.reporter('default'))
-		
-		.pipe(concat('allScript.js'))
-		.pipe(gulpIf(uglifyJS === true, uglify()))
-		.pipe(gulp.dest('assets/js'))
-		.pipe(livereload())
+
+// COMBINE JS
+	gulp.task('combine_js', ['check_js'], function(){
+		gulp.src(scriptSources)		
+		.pipe(concat('assets/js/allThemeControl.js'))
+		.pipe(gulpIf(uglifyJS, uglify()))
+		.pipe(gulp.dest('.'))
+	});
+
+
 	});
 
 
