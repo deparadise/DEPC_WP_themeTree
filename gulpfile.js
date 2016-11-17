@@ -51,20 +51,24 @@
 	var staticTemplates = ['./**/*.php'];
 
 
+// COMPASS / SASS
+	gulp.task('do_compass', function(){
+		gulp.src(targetMainSass)
+		.pipe(
+			// Configure my compass...
+			compass({
+				sass: 'assets/sass',
+				css: '.',
+				comments: true,
+				style: sassStyle, 							// expanded for dev / compressed for prod
+				image: 'assets/imgs'
+			})
+		)
+		.on('error', gUtil.log);
+		//.pipe(gulp.dest('.tmp/styles/styles.css'))		// Alternate desitnations if needed
 	});
 
-	// compass >>> Styles pipe
-	gulp.task('compass', function(){
-		gulp.src('assets/sass/style.scss')
-		.pipe(compass({
-			// COMPASS CONFIGURATION
-			sass: 'assets/sass',
-			css: '.',
-			comments: true,
-			style: sassStyle,  // expanded for dev / compressed for prod
-			image: 'assets/imgs'
-		})
-		.on('error', gutil.log))
+
 		.pipe(gulp.dest('.'))
 		.pipe(livereload())
 	});
