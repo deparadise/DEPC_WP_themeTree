@@ -150,7 +150,10 @@ function depc_scripts() {
 	// Foundation
 	wp_enqueue_style( 'Foundation-styles', get_template_directory_uri() . '/assets/libs/foundation/foundation.min.css');
 	wp_enqueue_script( 'Foundation-scripts', get_template_directory_uri() . '/assets/libs/foundation/foundation.min.js', array(), '01', true );
-	
+
+	// Async: http://caolan.github.io/async/
+	wp_enqueue_script( 'async', get_template_directory_uri() . '/assets/libs/async.min.js', array(), '01', true );
+
 	// style.css
 	wp_enqueue_style( 'depc-style', get_stylesheet_uri() );
 	

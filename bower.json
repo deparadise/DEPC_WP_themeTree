@@ -21,6 +21,7 @@
     "jquery": "jQuery#~2.1.4",
     "slick-carousel": "slick.js#~1.5.8",
     "angular": "~1.4.7",
-    "foundation": "~5.5.3"
+    "foundation": "~5.5.3",
+    "async": "^2.1.2"
   }
 }
