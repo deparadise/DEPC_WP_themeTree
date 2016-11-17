@@ -124,16 +124,11 @@
 	});
 
 
-/// DEFAULT >>> Run all dev tasks and init 'watch'
-	gulp.task('default', [
-		//'static', 
-		'compass', 
-		'js', 
-		'watch'
-	]);
-	
-	
-/// log >>> Test logging
-	gulp.task('log', function(){
-		gutil.log('Workflows are awesome!');
-	});
+// GULP COMMANDS
+gulp.task('default', [
+	'do_compass',
+	'combine_js',
+	'serve',
+	'watch_these'
+]);
+
