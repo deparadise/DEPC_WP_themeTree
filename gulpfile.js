@@ -1,14 +1,22 @@
-/// DEPENDENCIES
-	var 	gulp = require('gulp'),
-			compass = require('gulp-compass'),
-			concat = require('gulp-concat'),
-			gulpIf = require('gulp-if'),
-			jsHint = require('gulp-jshint'),
-			livereload = require('gulp-livereload'),
-			uglify = require('gulp-uglify');
-			gutil = require('gulp-util');
+/// GULP WORKFLOWS
+'use strict';
 
-/// WORKFLOW
+/// DEPENDENCIES
+	var gulp		= require('gulp'),
+		compass		= require('gulp-compass'),
+		jsHint 		= require('gulp-jshint'),
+		cache		= require('gulp-cached'),
+		stylish		= require('jshint-stylish'),
+
+		browserSync = require('browser-sync'),				//https://browsersync.io/docs/gulp
+		//livereload = require('gulp-livereload'),
+
+		concat = require('gulp-concat'),
+		uglify = require('gulp-uglify'),
+		gulpIf = require('gulp-if'),
+		
+		gUtil = require('gulp-util');
+
 	// Workflow parameters
 	var 	production,
 			sassStyle,
