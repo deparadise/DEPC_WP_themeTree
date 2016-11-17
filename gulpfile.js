@@ -17,26 +17,28 @@
 		
 		gUtil = require('gulp-util');
 
+// SETTINGS
+	// Workflow selection
+	var selectedReloadDelay = (true)? 6000 : 0;
+	var production = false;
+
 	// Workflow parameters
 	var 	production,
 			sassStyle,
 			uglifyJS;
 	
-	// Workflow selection
-	production = false;
 	
-	if (production === true) {
+	if (production) {
 		// Production parameters
 		 sassStyle = 'compressed';
 		 uglifyJS = true;
-		 gutil.log('Process for production!');
+		 gUtil.log('Process for production!');
 	}else{
 		// Development parameters
 		 sassStyle = 'expanded';
 		 uglifyJS = false;
-		 gutil.log('Process for development!');
+		 gUtil.log('Process for development!');
 	}
-	
 
 /// ASSET SOURCE LIST
 	// Designate dev js files
