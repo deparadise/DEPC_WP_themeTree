@@ -107,6 +107,20 @@
 	});
 
 
+// SERVER
+	gulp.task('serve', function(){
+		browserSync.init({
+			//port: 3000,
+			//startPath: 'http://themebench03.dev/', 			// specific starting point
+			open: true,
+			proxy: {
+				target: 'themebench03.dev',
+				ws: true
+			}//,
+			// server: {} 			// MAMP takes care of this...
+			
+			// Secondary options: https://browsersync.io/docs/options
+		});
 	});
 
 
