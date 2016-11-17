@@ -35,6 +35,27 @@ $(document).ready(function() {
 
 			return seriesCB(null);
 		},
+		assignBehavior: function(cb) {
+			var shadowNav = this;
+
+			async.eachOfSeries(
+				//
+				shadowNav.navTriggers,
+				//
+				function(trigger, index, seriesCB) {
+					shadowNav.setMainNavBehaviorOn(trigger, seriesCB)
+
+					// return seriesCB(null);
+				},
+				//
+				function(err) {
+					if (err) {
+						//err
+					}else{
+						return cb(null);
+					}
+				}
+			);
 		}
 	}
 
