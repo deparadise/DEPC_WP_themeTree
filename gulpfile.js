@@ -109,6 +109,7 @@
 
 // SERVER
 	gulp.task('serve', function(){
+		// Browser Sync otions: https://browsersync.io/docs/options
 		browserSync.init({
 			//port: 3000,
 			//startPath: 'http://themebench03.dev/', 			// specific starting point
@@ -118,8 +119,6 @@
 				ws: true
 			}//,
 			// server: {} 			// MAMP takes care of this...
-			
-			// Secondary options: https://browsersync.io/docs/options
 		});
 	});
 
