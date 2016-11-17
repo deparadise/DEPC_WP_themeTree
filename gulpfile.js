@@ -40,15 +40,14 @@
 		 gUtil.log('Process for development!');
 	}
 
-/// ASSET SOURCE LIST
+
+// ASSETS
+	var targetMainSass 	=	'assets/sass/style.scss';
+	var sassSources 	=	['assets/sass/**/*.scss'];
+
 	// Designate dev js files
-	var jsSources = ['assets/jsDev/*.js']; 
+	var scriptSources = ['assets/jsDev/*.js']; 
 	//  Designate dev php files
-	var staticSources = ['./**/*.php'];
-	// Designate dev sass files
-	var sassSources = ['assets/sass/**/*.scss'];
-	
-	
 /// GULP PIPE FUNCTIONS
 	// static >>> all php static files pipe
 	gulp.task('static', function(){
