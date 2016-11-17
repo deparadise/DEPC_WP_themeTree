@@ -1,4 +1,4 @@
-console.log('simple slider controller loaded!');
+// console.log('simple slider controller loaded!');
 
 $(document).ready(function(){
 	$('.simple-slider').slick({
