@@ -87,16 +87,26 @@
 	});
 
 
+// WATCH
+	gulp.task('watch_these', function() {
+		// styles
+		gulp.watch(sassSources, ['do_compass'])
+			.on('change', function(){
+				console.log('> waiting for compass to compile the sass...');
+				setTimeout(function() {
+					console.log('... OK GO!');
+					browserSync.reload();
+				}, selectedReloadDelay);
+			});
+		// Templates
+		gulp.watch(staticTemplates)
+			.on('change', browserSync.reload);
+		// Scripts
+		gulp.watch(scriptSources, ['combine_js'])
+			.on('change', browserSync.reload);
 	});
 
 
-/// GULP RUNNING FUNCTIONS
-// watch >>> Watches files for changes and runs workflow pipes
-	gulp.task('watch', function(){
-		livereload.listen();
-		gulp.watch(staticSources, ['static']);
-		gulp.watch(sassSources, ['compass']);
-		gulp.watch(jsSources, ['js']);
 	});
 
 
