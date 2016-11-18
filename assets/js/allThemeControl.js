@@ -128,17 +128,15 @@ $(document).ready(function() {
 			// to Device
 			if (shadowNav.windowSize <= shadowNav.deviceSize) {
 				if (shadowNav.deviceDisplay === false) {
-					console.log('Display changed to device!');
+					// console.log('Display changed to device!');
 					shadowNav.removeNavBehavior();
 				} 
 				shadowNav.deviceDisplay = true;
 			// to Screen
 			}else{
 				if (shadowNav.deviceDisplay === true) {
-					console.log('Display changed to screen!');
-					// setTimeout(function() {
-						shadowNav.assignNavBehavior();
-					// },5000);
+					// console.log('Display changed to screen!');
+					shadowNav.assignNavBehavior();
 				} 
 				shadowNav.deviceDisplay = false;
 			}
@@ -149,7 +147,7 @@ $(document).ready(function() {
 			// );
 		},
 		resizeEvent: {} // event listener assigned here
-	}
+	}; // END shadowNav API
 
 
 	async.waterfall(
@@ -189,16 +187,16 @@ $(document).ready(function() {
 			if (err) {
 				console.error(err);
 			}else{
-				console.log(
-					'> the Shadow Nav is setup!'
-					//, shadowNav
-				);
+				// console.log(
+				// 	'> the Shadow Nav is setup!'
+				// 	//, shadowNav
+				// );
 			}
 		}
-	);
+	); // END shadowNav init process
 
 ///
-}); // END shadowNav.js
+}); // END shadowNav.js module
 // console.log('simple slider controller loaded!');
 
 $(document).ready(function(){
