@@ -88,7 +88,32 @@ $(document).ready(function() {
 					}
 				}
 			);
-		}
+		},
+		testApplyWindowChange: function() {
+			var shadowNav = this;
+
+			// to Device
+			if (shadowNav.windowSize <= shadowNav.deviceSize) {
+				if (shadowNav.deviceDisplay === false) {
+					console.log('Display changed to device!');
+				} 
+				shadowNav.deviceDisplay = true;
+			// to Screen
+			}else{
+				if (shadowNav.deviceDisplay === true) {
+					console.log('Display changed to screen!');
+					// setTimeout(function() {
+						shadowNav.assignNavBehavior();
+					// },5000);
+				} 
+				shadowNav.deviceDisplay = false;
+			}
+
+			// console.log(
+			// 	'Document windowSize:', shadowNav.windowSize//,
+			// 	//'\ndeviceDisplay:', shadowNav.deviceDisplay
+			// );
+		},
 	}
 
 
