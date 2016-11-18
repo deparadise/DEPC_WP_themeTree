@@ -2,9 +2,14 @@
 $(document).foundation();
 //console.log('mainNav.js loaded!');
 //console.log('shadowNav.js loaded...');
+var shadowNav = {};
+
 $(document).ready(function() {
 
-	var shadowNav = {
+	shadowNav = {
+		windowSize: 0,
+		deviceSize: 640,
+		deviceDisplay: false,
 		navTriggers: [],
 		targetNavComponents: function(cb) {		
 			this.navTriggers = jQuery(
@@ -18,6 +23,8 @@ $(document).ready(function() {
 		setMainNavBehaviorOn: function(trigger, seriesCB) {
 			//console.log('test trigger:', trigger);
 			var targetMenu = $(trigger).children('.sub-menu');
+			targetMenu.removeAttr('style'); // reset
+
 			var targetMenuHeight = $(targetMenu).height();
 
 			$(trigger).hover(
@@ -62,7 +69,7 @@ $(document).ready(function() {
 
 			return seriesCB(null);
 		},
-		assignBehavior: function(cb) {
+		assignNavBehavior: function(cb) {
 			var shadowNav = this;
 
 			async.eachOfSeries(
@@ -71,19 +78,46 @@ $(document).ready(function() {
 				//
 				function(trigger, index, seriesCB) {
 					shadowNav.setMainNavBehaviorOn(trigger, seriesCB)
-
-					// return seriesCB(null);
 				},
 				//
 				function(err) {
 					if (err) {
 						//err
 					}else{
-						return cb(null);
+						//console.log('NavBehavior assigned...');
+						if (cb) {
+							return cb(null);
+						}
 					}
 				}
 			);
-		}
+		},
+		testApplyWindowChange: function() {
+			var shadowNav = this;
+
+			// to Device
+			if (shadowNav.windowSize <= shadowNav.deviceSize) {
+				if (shadowNav.deviceDisplay === false) {
+					console.log('Display changed to device!');
+				} 
+				shadowNav.deviceDisplay = true;
+			// to Screen
+			}else{
+				if (shadowNav.deviceDisplay === true) {
+					console.log('Display changed to screen!');
+					// setTimeout(function() {
+						shadowNav.assignNavBehavior();
+					// },5000);
+				} 
+				shadowNav.deviceDisplay = false;
+			}
+
+			// console.log(
+			// 	'Document windowSize:', shadowNav.windowSize//,
+			// 	//'\ndeviceDisplay:', shadowNav.deviceDisplay
+			// );
+		},
+		resizeEvent: {} // event listener assigned here
 	}
 
 
@@ -98,14 +132,30 @@ $(document).ready(function() {
 			},
 			// Behavior
 			function(cb) {
-				shadowNav.assignBehavior(cb);
+				shadowNav.assignNavBehavior(cb);
+			},
+			// Init update on window size change event
+			function(cb) {
+				shadowNav.resizeEvent = $(window).resize(function() {
+					shadowNav.windowSize = $(document).width();
+					shadowNav.testApplyWindowChange();
+				});
+				
+				// Initial set and test
+				shadowNav.windowSize = $(document).width();
+				shadowNav.testApplyWindowChange();
+
+				return cb(null);
 			}
 		],
 		function(err) {
 			if (err) {
 				console.error(err);
 			}else{
-				console.log('> the Shadow Nav is setup!');
+				console.log(
+					'> the Shadow Nav is setup!'
+					//, shadowNav
+				);
 			}
 		}
 	);
