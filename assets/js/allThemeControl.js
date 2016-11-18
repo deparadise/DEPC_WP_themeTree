@@ -20,10 +20,14 @@ $(document).ready(function() {
 				return cb();
 			}
 		},
-		setMainNavBehaviorOn: function(trigger, seriesCB) {
-			//console.log('test trigger:', trigger);
+		resetTargetMenuStyleAttr: function(trigger) {
 			var targetMenu = $(trigger).children('.sub-menu');
 			targetMenu.removeAttr('style'); // reset
+			return targetMenu;
+		},
+		setMainNavBehaviorOn: function(trigger, seriesCB) {
+			//console.log('test trigger:', trigger);
+			var targetMenu = shadowNav.resetTargetMenuStyleAttr(trigger);
 
 			var targetMenuHeight = $(targetMenu).height();
 
@@ -69,6 +73,32 @@ $(document).ready(function() {
 
 			return seriesCB(null);
 		},
+		removeNavBehavior: function(cb) {
+			var shadowNav = this;
+
+			async.eachOfSeries(
+				//
+				shadowNav.navTriggers,
+				//
+				function(trigger, index, seriesCB) {
+					$(trigger).off();
+					var targetMenu = shadowNav.resetTargetMenuStyleAttr(trigger);
+					
+					return seriesCB(null);
+				},
+				//
+				function(err) {
+					if (err) {
+						//err
+					}else{
+						//console.log('NavBehavior removed...');
+						if (cb) {
+							return cb(null);
+						}
+					}
+				}
+			);
+		},
 		assignNavBehavior: function(cb) {
 			var shadowNav = this;
 
@@ -77,7 +107,7 @@ $(document).ready(function() {
 				shadowNav.navTriggers,
 				//
 				function(trigger, index, seriesCB) {
-					shadowNav.setMainNavBehaviorOn(trigger, seriesCB)
+					shadowNav.setMainNavBehaviorOn(trigger, seriesCB);
 				},
 				//
 				function(err) {
@@ -99,6 +129,7 @@ $(document).ready(function() {
 			if (shadowNav.windowSize <= shadowNav.deviceSize) {
 				if (shadowNav.deviceDisplay === false) {
 					console.log('Display changed to device!');
+					shadowNav.removeNavBehavior();
 				} 
 				shadowNav.deviceDisplay = true;
 			// to Screen
@@ -123,17 +154,6 @@ $(document).ready(function() {
 
 	async.waterfall(
 		[
-			// target triggers
-			function(cb) {
-				shadowNav.targetNavComponents(function(){
-					//console.log('navTriggers', shadowNav.navTriggers);
-					return cb(null);
-				});
-			},
-			// Behavior
-			function(cb) {
-				shadowNav.assignNavBehavior(cb);
-			},
 			// Init update on window size change event
 			function(cb) {
 				shadowNav.resizeEvent = $(window).resize(function() {
@@ -146,7 +166,24 @@ $(document).ready(function() {
 				shadowNav.testApplyWindowChange();
 
 				return cb(null);
-			}
+			},
+			// target triggers
+			function(cb) {
+				shadowNav.targetNavComponents(function(){
+					//console.log('navTriggers', shadowNav.navTriggers);
+					return cb(null);
+				});
+			},
+			// Behavior
+			function(cb) {
+				if (shadowNav.deviceDisplay) {
+					// do nothing...
+					return cb(null);
+				}else{
+					shadowNav.assignNavBehavior(cb);	
+				}
+			},
+			
 		],
 		function(err) {
 			if (err) {
