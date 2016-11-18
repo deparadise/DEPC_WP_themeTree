@@ -114,6 +114,7 @@ $(document).ready(function() {
 			// 	//'\ndeviceDisplay:', shadowNav.deviceDisplay
 			// );
 		},
+		resizeEvent: {} // event listener assigned here
 	}
 
 
@@ -129,6 +130,19 @@ $(document).ready(function() {
 			// Behavior
 			function(cb) {
 				shadowNav.assignBehavior(cb);
+			},
+			// Init update on window size change event
+			function(cb) {
+				shadowNav.resizeEvent = $(window).resize(function() {
+					shadowNav.windowSize = $(document).width();
+					shadowNav.testApplyWindowChange();
+				});
+				
+				// Initial set and test
+				shadowNav.windowSize = $(document).width();
+				shadowNav.testApplyWindowChange();
+
+				return cb(null);
 			}
 		],
 		function(err) {
