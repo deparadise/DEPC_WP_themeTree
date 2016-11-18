@@ -129,7 +129,7 @@ $(document).ready(function() {
 			},
 			// Behavior
 			function(cb) {
-				shadowNav.assignBehavior(cb);
+				shadowNav.assignNavBehavior(cb);
 			},
 			// Init update on window size change event
 			function(cb) {
