@@ -2055,27 +2055,32 @@ table {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-/* line 4, assets/sass/navigation/_mainNav.scss */
+/* line 3, assets/sass/navigation/_mainNav.scss */
+nav.site-header.expanded .main-navigation {
+  overflow: hidden;
+  padding-bottom: 3em;
+}
+/* line 7, assets/sass/navigation/_mainNav.scss */
 nav.site-header.expanded .main-navigation ul.main-nav {
   display: block;
 }
-/* line 6, assets/sass/navigation/_mainNav.scss */
+/* line 9, assets/sass/navigation/_mainNav.scss */
 nav.site-header.expanded .main-navigation ul.main-nav li {
   width: 100%;
   border-top: 1px solid #222;
 }
 
-/* line 16, assets/sass/navigation/_mainNav.scss */
+/* line 19, assets/sass/navigation/_mainNav.scss */
 nav.site-header .main-navigation .menu ul {
   display: none;
 }
 
-/* line 23, assets/sass/navigation/_mainNav.scss */
+/* line 26, assets/sass/navigation/_mainNav.scss */
 nav.site-header.expanded .main-navigation .menu ul {
   display: block;
 }
 
-/* line 28, assets/sass/navigation/_mainNav.scss */
+/* line 31, assets/sass/navigation/_mainNav.scss */
 nav.site-header {
   position: absolute;
   z-index: 9999;
@@ -2087,99 +2092,99 @@ nav.site-header {
   font-family: Oswald;
   overflow: visible;
 }
-/* line 38, assets/sass/navigation/_mainNav.scss */
+/* line 41, assets/sass/navigation/_mainNav.scss */
 nav.site-header .toggle-topbar.menu-icon a {
   height: 45px;
   top: -7px;
 }
-/* line 42, assets/sass/navigation/_mainNav.scss */
+/* line 45, assets/sass/navigation/_mainNav.scss */
 nav.site-header .toggle-topbar.menu-icon a span::after {
   width: 25px;
   top: 53%;
 }
-/* line 48, assets/sass/navigation/_mainNav.scss */
+/* line 51, assets/sass/navigation/_mainNav.scss */
 nav.site-header ul.site-branding {
   display: block;
 }
-/* line 52, assets/sass/navigation/_mainNav.scss */
+/* line 55, assets/sass/navigation/_mainNav.scss */
 nav.site-header ul.site-branding li h1 a {
   width: 300px !important;
 }
-/* line 56, assets/sass/navigation/_mainNav.scss */
+/* line 59, assets/sass/navigation/_mainNav.scss */
 nav.site-header ul.site-branding li h1 .logo {
   position: absolute;
   top: -35px;
   width: 85px;
 }
-/* line 62, assets/sass/navigation/_mainNav.scss */
+/* line 65, assets/sass/navigation/_mainNav.scss */
 nav.site-header ul.site-branding li h1 .logo-type {
   position: absolute;
   top: -2px;
   left: 95px;
   height: 50px;
 }
-/* line 72, assets/sass/navigation/_mainNav.scss */
+/* line 75, assets/sass/navigation/_mainNav.scss */
 nav.site-header ul.main-nav {
   display: none;
 }
-/* line 75, assets/sass/navigation/_mainNav.scss */
+/* line 78, assets/sass/navigation/_mainNav.scss */
 nav.site-header ul.main-nav li a {
   position: relative;
   font-size: 1.15em;
   font-family: Oswald;
 }
-/* line 80, assets/sass/navigation/_mainNav.scss */
+/* line 83, assets/sass/navigation/_mainNav.scss */
 nav.site-header ul.main-nav li ul.sub-menu {
   padding-left: 1.5em;
 }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 93, assets/sass/navigation/_mainNav.scss */
+  /* line 96, assets/sass/navigation/_mainNav.scss */
   nav.site-header ul.main-nav {
     position: relative;
     top: -1px;
     display: block;
     padding: 0 5em 0 0;
   }
-  /* line 98, assets/sass/navigation/_mainNav.scss */
+  /* line 101, assets/sass/navigation/_mainNav.scss */
   nav.site-header ul.main-nav li {
     background: none;
   }
-  /* line 100, assets/sass/navigation/_mainNav.scss */
+  /* line 103, assets/sass/navigation/_mainNav.scss */
   nav.site-header ul.main-nav li a {
     font-size: 1.15em;
     background: none;
   }
-  /* line 104, assets/sass/navigation/_mainNav.scss */
+  /* line 107, assets/sass/navigation/_mainNav.scss */
   nav.site-header ul.main-nav li ul.sub-menu {
     position: absolute;
     padding-left: 0;
     display: none;
     z-index: 1;
   }
-  /* line 110, assets/sass/navigation/_mainNav.scss */
+  /* line 113, assets/sass/navigation/_mainNav.scss */
   nav.site-header ul.main-nav li ul.sub-menu li {
     width: 175px;
   }
-  /* line 112, assets/sass/navigation/_mainNav.scss */
+  /* line 115, assets/sass/navigation/_mainNav.scss */
   nav.site-header ul.main-nav li ul.sub-menu li a {
     background-color: #d24d4d;
   }
-  /* line 115, assets/sass/navigation/_mainNav.scss */
+  /* line 118, assets/sass/navigation/_mainNav.scss */
   nav.site-header ul.main-nav li ul.sub-menu li a:after {
     content: none;
   }
-  /* line 120, assets/sass/navigation/_mainNav.scss */
+  /* line 123, assets/sass/navigation/_mainNav.scss */
   nav.site-header ul.main-nav li ul.sub-menu ul.sub-menu {
     display: none;
     top: 0px;
     left: -175px;
   }
-  /* line 127, assets/sass/navigation/_mainNav.scss */
+  /* line 130, assets/sass/navigation/_mainNav.scss */
   nav.site-header ul.main-nav li.menu-item-has-children:hover > ul.sub-menu {
     display: block;
   }
-  /* line 130, assets/sass/navigation/_mainNav.scss */
+  /* line 133, assets/sass/navigation/_mainNav.scss */
   nav.site-header ul.main-nav li.menu-item-has-children a:after {
     position: relative;
     float: right;
@@ -2194,7 +2199,7 @@ nav.site-header ul.main-nav li ul.sub-menu {
     border-top-style: solid;
     margin-top: -2.5px;
   }
-  /* line 144, assets/sass/navigation/_mainNav.scss */
+  /* line 147, assets/sass/navigation/_mainNav.scss */
   nav.site-header ul.main-nav li.menu-item-has-children ul.sub-menu li.menu-item-has-children > a:before {
     position: relative;
     float: left;
@@ -2210,17 +2215,17 @@ nav.site-header ul.main-nav li ul.sub-menu {
     transform: rotate(90deg);
   }
 
-  /* line 161, assets/sass/navigation/_mainNav.scss */
+  /* line 164, assets/sass/navigation/_mainNav.scss */
   .top-bar-section li:not(.has-form) a:not(.button) {
     background: none;
   }
 }
-/* line 170, assets/sass/navigation/_mainNav.scss */
+/* line 173, assets/sass/navigation/_mainNav.scss */
 .top-bar-section ul li:hover:not(.has-form) > a {
   background-color: #d24d4d;
 }
 
-/* line 174, assets/sass/navigation/_mainNav.scss */
+/* line 177, assets/sass/navigation/_mainNav.scss */
 .top-bar-section li:not(.has-form) a:not(.button):hover {
   background-color: #d24d4d;
 }
@@ -2326,7 +2331,6 @@ nav.site-header ul.main-nav li ul.sub-menu {
 /* line 7, assets/sass/layout/_page.scss */
 #page.site {
   position: relative;
-  overflow: hidden;
 }
 
 /* line 20, assets/sass/layout/_page.scss */

@@ -1,6 +1,9 @@
 // #masthead
 nav.site-header.expanded {
 	.main-navigation {
+		overflow: hidden;
+		padding-bottom: 3em; // extra space for bottom of mobile nav
+		// border: 1px solid fuchsia;
 		ul.main-nav {
 			display: block;
 			li {

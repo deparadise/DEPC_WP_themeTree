@@ -6,7 +6,7 @@
 // STRUCTURE
 #page.site {
 	position: relative;
-	overflow: hidden;
+	// overflow: hidden; // Not sure why I did this but it cuts off the mobile navs render
 }
 
 #content.site-content {
