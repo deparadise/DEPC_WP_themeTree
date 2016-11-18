@@ -4,6 +4,9 @@ var shadowNav = {};
 $(document).ready(function() {
 
 	shadowNav = {
+		windowSize: 0,
+		deviceSize: 640,
+		deviceDisplay: false,
 		navTriggers: [],
 		targetNavComponents: function(cb) {		
 			this.navTriggers = jQuery(
