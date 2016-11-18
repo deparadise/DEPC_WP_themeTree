@@ -151,17 +151,6 @@ $(document).ready(function() {
 
 	async.waterfall(
 		[
-			// target triggers
-			function(cb) {
-				shadowNav.targetNavComponents(function(){
-					//console.log('navTriggers', shadowNav.navTriggers);
-					return cb(null);
-				});
-			},
-			// Behavior
-			function(cb) {
-				shadowNav.assignNavBehavior(cb);
-			},
 			// Init update on window size change event
 			function(cb) {
 				shadowNav.resizeEvent = $(window).resize(function() {
@@ -174,7 +163,24 @@ $(document).ready(function() {
 				shadowNav.testApplyWindowChange();
 
 				return cb(null);
-			}
+			},
+			// target triggers
+			function(cb) {
+				shadowNav.targetNavComponents(function(){
+					//console.log('navTriggers', shadowNav.navTriggers);
+					return cb(null);
+				});
+			},
+			// Behavior
+			function(cb) {
+				if (shadowNav.deviceDisplay) {
+					// do nothing...
+					return cb(null);
+				}else{
+					shadowNav.assignNavBehavior(cb);	
+				}
+			},
+			
 		],
 		function(err) {
 			if (err) {
