@@ -20,6 +20,8 @@ $(document).ready(function() {
 		setMainNavBehaviorOn: function(trigger, seriesCB) {
 			//console.log('test trigger:', trigger);
 			var targetMenu = $(trigger).children('.sub-menu');
+			targetMenu.removeAttr('style'); // reset
+
 			var targetMenuHeight = $(targetMenu).height();
 
 			$(trigger).hover(
