@@ -17,10 +17,14 @@ $(document).ready(function() {
 				return cb();
 			}
 		},
-		setMainNavBehaviorOn: function(trigger, seriesCB) {
-			//console.log('test trigger:', trigger);
+		resetTargetMenuStyleAttr: function(trigger) {
 			var targetMenu = $(trigger).children('.sub-menu');
 			targetMenu.removeAttr('style'); // reset
+			return targetMenu;
+		},
+		setMainNavBehaviorOn: function(trigger, seriesCB) {
+			//console.log('test trigger:', trigger);
+			var targetMenu = shadowNav.resetTargetMenuStyleAttr(trigger);
 
 			var targetMenuHeight = $(targetMenu).height();
 
