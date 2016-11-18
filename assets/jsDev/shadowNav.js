@@ -1,7 +1,9 @@
 //console.log('shadowNav.js loaded...');
+var shadowNav = {};
+
 $(document).ready(function() {
 
-	var shadowNav = {
+	shadowNav = {
 		navTriggers: [],
 		targetNavComponents: function(cb) {		
 			this.navTriggers = jQuery(
