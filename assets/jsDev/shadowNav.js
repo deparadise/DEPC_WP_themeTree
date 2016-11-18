@@ -70,6 +70,32 @@ $(document).ready(function() {
 
 			return seriesCB(null);
 		},
+		removeNavBehavior: function(cb) {
+			var shadowNav = this;
+
+			async.eachOfSeries(
+				//
+				shadowNav.navTriggers,
+				//
+				function(trigger, index, seriesCB) {
+					$(trigger).off();
+					var targetMenu = shadowNav.resetTargetMenuStyleAttr(trigger);
+					
+					return seriesCB(null);
+				},
+				//
+				function(err) {
+					if (err) {
+						//err
+					}else{
+						//console.log('NavBehavior removed...');
+						if (cb) {
+							return cb(null);
+						}
+					}
+				}
+			);
+		},
 		assignNavBehavior: function(cb) {
 			var shadowNav = this;
 
