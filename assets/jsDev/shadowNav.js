@@ -126,6 +126,7 @@ $(document).ready(function() {
 			if (shadowNav.windowSize <= shadowNav.deviceSize) {
 				if (shadowNav.deviceDisplay === false) {
 					console.log('Display changed to device!');
+					shadowNav.removeNavBehavior();
 				} 
 				shadowNav.deviceDisplay = true;
 			// to Screen
