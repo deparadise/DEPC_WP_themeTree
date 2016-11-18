@@ -149,7 +149,10 @@ $(document).ready(function() {
 			if (err) {
 				console.error(err);
 			}else{
-				console.log('> the Shadow Nav is setup!');
+				console.log(
+					'> the Shadow Nav is setup!'
+					//, shadowNav
+				);
 			}
 		}
 	);
