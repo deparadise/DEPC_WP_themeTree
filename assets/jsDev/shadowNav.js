@@ -75,8 +75,6 @@ $(document).ready(function() {
 				//
 				function(trigger, index, seriesCB) {
 					shadowNav.setMainNavBehaviorOn(trigger, seriesCB)
-
-					// return seriesCB(null);
 				},
 				//
 				function(err) {
