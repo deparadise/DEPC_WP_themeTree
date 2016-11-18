@@ -81,7 +81,10 @@ $(document).ready(function() {
 					if (err) {
 						//err
 					}else{
-						return cb(null);
+						//console.log('NavBehavior assigned...');
+						if (cb) {
+							return cb(null);
+						}
 					}
 				}
 			);
