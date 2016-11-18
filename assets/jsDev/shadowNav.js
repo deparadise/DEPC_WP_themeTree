@@ -66,7 +66,7 @@ $(document).ready(function() {
 
 			return seriesCB(null);
 		},
-		assignBehavior: function(cb) {
+		assignNavBehavior: function(cb) {
 			var shadowNav = this;
 
 			async.eachOfSeries(
