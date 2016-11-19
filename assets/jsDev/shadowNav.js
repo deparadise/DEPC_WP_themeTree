@@ -202,7 +202,7 @@ $(document).ready(function() {
 			// Init update on window size change event
 			function(cb) {
 				shadowNav.resizeEvent = $(window).resize(function() {
-					shadowNav.windowSize = $(document).width();
+					shadowNav.windowWidth = $(document).width();
 					shadowNav.testApplyWindowChange();
 				});
 				
