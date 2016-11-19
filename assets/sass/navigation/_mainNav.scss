@@ -14,19 +14,6 @@ nav.site-header.expanded {
 	}
 }
 
-nav.site-header {
-	// default WP menu
-	.main-navigation .menu ul {
-		display: none;
-		//border:  1px solid fuchsia;
-	}
-	// FOUNDATION WP menu
-}
-nav.site-header.expanded  {
-	.main-navigation .menu ul {
-		display: block;
-	}
-}
 
 nav.site-header {
 	position: absolute;
@@ -72,17 +59,22 @@ nav.site-header {
 			}
 		}
 	}
-	ul.main-nav {
-		display: none;
-		li {
-			a {
-				position: relative;
-				font-size: 1.15em;
-				font-family: $font__main;
-			}
-			ul.sub-menu {
-				padding-left: 1.5em;
-				//border: 1px solid fuchsia;
+	.main-navigation.top-bar-section {
+		overflow: hidden;
+		height: 0px;
+		// border: 1px solid fuchsia;
+		ul.main-nav {
+			//display: none;
+			li {
+				a {
+					position: relative;
+					font-size: 1.15em;
+					font-family: $font__main;
+				}
+				ul.sub-menu {
+					padding-left: 1.5em;
+					//border: 1px solid fuchsia;
+				}
 			}
 		}
 	}
@@ -93,6 +85,11 @@ nav.site-header {
 	nav.site-header {
 		//display: none;
 		//background-color: green;
+		.main-navigation.top-bar-section {
+			overflow: visible;
+			height: 0px;
+			// border: 1px solid green;
+
 		ul.main-nav {
 			position: relative;
 			top: -1px;
@@ -127,6 +124,9 @@ nav.site-header {
 					//border: 1px solid orange;
 				}
 			}
+			li:hover {
+				background-color: $solid-red;
+			}
 			li.menu-item-has-children:hover > ul.sub-menu {
 				display: block;
 			} 
@@ -159,6 +159,8 @@ nav.site-header {
 				transform: rotate(90deg);
 				//border: 1px solid green;
 			}
+		}
+
 		}
 	}
 	.top-bar-section li:not(.has-form) a:not(.button) {
