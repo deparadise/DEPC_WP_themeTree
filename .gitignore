@@ -48,10 +48,6 @@ twentytwelve
 node_modules
 bower_components
 
-# Dev build components
-_dev-style.css
-_dev-allScript.js
-
-# Production components
-_style.css
-_allScript.js
+# Dynamic build components
+style.css
+allScript.js
