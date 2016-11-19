@@ -184,7 +184,7 @@ $(document).ready(function() {
 			}
 
 			// console.log(
-			// 	'Document windowSize:', shadowNav.windowSize//,
+			// 	'Document windowWidth:', shadowNav.windowWidth//,
 			// 	//'\ndeviceDisplay:', shadowNav.deviceDisplay
 			// );
 		},
