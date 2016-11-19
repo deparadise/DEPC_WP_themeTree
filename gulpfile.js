@@ -107,7 +107,7 @@
 // COMBINE JS
 	gulp.task('combine_js', ['check_js'], function(){
 		gulp.src(scriptSources)		
-		.pipe(concat('allScript.js'))
+		.pipe(concat(buildComponents[0]))
 		.pipe(gulpIf(uglifyJS, uglify()))
 		.pipe(gulp.dest('.'));
 	});
