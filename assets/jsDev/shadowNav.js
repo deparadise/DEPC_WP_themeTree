@@ -52,9 +52,41 @@ $(document).ready(function() {
 			}
 			// console.log('TEST targetMenuHeight:', targetMenuHeight);
 
+			var shadowOpen = function() {
+				// $(targetMenu).css('display', 'none').fadeIn();
+				$(targetMenu)
+				.stop(true)
+				.css({
+					'display': 'block',
+					'height': '0px',
+					'opacity': '0',
+					// 'border': '1px solid green'
+				})
+				.animate({
+					'height': targetMenuHeight,
+					'opacity':'1'
+				}, 300);
+			};
+			var shadowClose = function() {
+				//$(targetMenu).css('display', 'block').fadeOut();
+				$(targetMenu)
+				.stop(true)
+				.css({
+					'display': 'block',
+					'height': targetMenuHeight,
+					'opacity': '1',
+					// 'border': '1px solid green'
+				})
+				.stop(true)
+				.animate({
+					'height': '0px',
+					'opacity':'0'
+				}, 300, function() {
+					$(targetMenu).css({
+						'display': 'none'
 					});
-				}
-			);
+				});
+			};
 
 			return seriesCB(null);
 		},
