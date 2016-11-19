@@ -2,76 +2,115 @@
 $(document).foundation();
 //console.log('mainNav.js loaded!');
 //console.log('shadowNav.js loaded...');
-var shadowNav = {};
+// var shadowNav = {};
 
 $(document).ready(function() {
 
-	shadowNav = {
-		windowSize: 0,
+	var shadowNav = {
+		windowWidth: 0,
 		deviceSize: 640,
-		deviceDisplay: false,
+		deviceDisplay: null,
 		navTriggers: [],
-		targetNavComponents: function(cb) {		
-			this.navTriggers = jQuery(
+		deviceNavToggle: [],
+		targetNavComponents: function(cb) {
+			this.deviceNavToggle = $('.toggle-topbar a');
+
+			this.navTriggers = $(
 				'.main-nav > .menu-item-has-children'
-			);//.filter('.main-nav > li');
+			);
 
 			if (cb) {
 				return cb();
 			}
 		},
-		resetTargetMenuStyleAttr: function(trigger) {
-			var targetMenu = $(trigger).children('.sub-menu');
+		targetResetMenuContainer: function(trigger, triggerIsToggle) {
+			var targetMenu = [];
+
+			if (triggerIsToggle) {
+				targetMenu = $('.main-navigation.top-bar-section');
+			}else{
+				targetMenu = $(trigger).children('.sub-menu');
+			}
+
+			//console.log('TEST targetMenu:', targetMenu);
 			targetMenu.removeAttr('style'); // reset
+			
 			return targetMenu;
 		},
-		setMainNavBehaviorOn: function(trigger, seriesCB) {
-			//console.log('test trigger:', trigger);
-			var targetMenu = shadowNav.resetTargetMenuStyleAttr(trigger);
+		setShadowBehaviorOn: function(trigger, callback) {
+			// console.log('TEST trigger:', trigger);
+			$(trigger).off(); // reset of bindings
 
-			var targetMenuHeight = $(targetMenu).height();
+			var toggleIsOpen = false;
+			var triggerIsToggle = ($(trigger)[0].className.includes('toggle-link'))? true : false;
+			// console.log('TEST triggerIsToggle:', triggerIsToggle);
+			var targetMenu = shadowNav.targetResetMenuContainer($(trigger), triggerIsToggle);
 
-			$(trigger).hover(
-				// mouse in
-				function() {
-					// $(targetMenu).css('display', 'none').fadeIn();
-					$(targetMenu)
-					.stop(true)
-					.css({
-						'display': 'block',
-						'height': '0px',
-						'opacity': '0',
-						// 'border': '1px solid green'
-					})
-					.animate({
-						'height': targetMenuHeight,
-						'opacity':'1'
-					}, 300);
-				},
-				// mouse out
-				function() {
-					//$(targetMenu).css('display', 'block').fadeOut();
-					$(targetMenu)
-					.stop(true)
-					.css({
-						'display': 'block',
-						'height': targetMenuHeight,
-						'opacity': '1',
-						// 'border': '1px solid green'
-					})
-					.stop(true)
-					.animate({
-						'height': '0px',
-						'opacity':'0'
-					}, 300, function() {
-						$(targetMenu).css({
-							'display': 'none'
-						});
+			var targetMenuHeight = 0;
+
+			if (triggerIsToggle) {
+				targetMenuHeight = targetMenu.children('.main-nav').height() + 75;
+			}else{
+				targetMenuHeight = $(targetMenu).height();
+			}
+			// console.log('TEST targetMenuHeight:', targetMenuHeight);
+
+			var shadowOpen = function() {
+				// $(targetMenu).css('display', 'none').fadeIn();
+				$(targetMenu)
+				.stop(true)
+				.css({
+					'display': 'block',
+					'height': '0px',
+					'opacity': '0',
+					// 'border': '1px solid green'
+				})
+				.animate({
+					'height': targetMenuHeight,
+					'opacity':'1'
+				}, 300);
+			};
+			var shadowClose = function() {
+				//$(targetMenu).css('display', 'block').fadeOut();
+				$(targetMenu)
+				.stop(true)
+				.css({
+					'display': 'block',
+					'height': targetMenuHeight,
+					'opacity': '1',
+					// 'border': '1px solid green'
+				})
+				.stop(true)
+				.animate({
+					'height': '0px',
+					'opacity':'0'
+				}, 300, function() {
+					$(targetMenu).css({
+						'display': 'none'
 					});
-				}
-			);
+				});
+			};
 
-			return seriesCB(null);
+			if (triggerIsToggle) {
+				// device menu toggle
+				$(trigger).click(function() {
+					//console.log('toggleIsOpen:', toggleIsOpen);
+					if (toggleIsOpen) {
+						shadowClose();
+						toggleIsOpen = false;
+					}else{
+						shadowOpen();
+						toggleIsOpen = true;
+					}
+				});
+			}else{
+				// Nav links hover
+				$(trigger).hover(shadowOpen, shadowClose);
+			}
+
+			if (callback) {
+				return callback(null);
+			}
 		},
 		removeNavBehavior: function(cb) {
 			var shadowNav = this;
@@ -82,7 +121,7 @@ $(document).ready(function() {
 				//
 				function(trigger, index, seriesCB) {
 					$(trigger).off();
-					var targetMenu = shadowNav.resetTargetMenuStyleAttr(trigger);
+					var targetMenu = shadowNav.targetResetMenuContainer($(trigger));
 					
 					return seriesCB(null);
 				},
@@ -99,7 +138,11 @@ $(document).ready(function() {
 				}
 			);
 		},
-		assignNavBehavior: function(cb) {
+		assignNavToggleBehavior: function(cb) {
+			shadowNav.setShadowBehaviorOn(this.deviceNavToggle, cb);
+			//return cb(null);
+		},
+		assignNavTriggerBehavior: function(cb) {
 			var shadowNav = this;
 
 			async.eachOfSeries(
@@ -107,7 +150,7 @@ $(document).ready(function() {
 				shadowNav.navTriggers,
 				//
 				function(trigger, index, seriesCB) {
-					shadowNav.setMainNavBehaviorOn(trigger, seriesCB);
+					shadowNav.setShadowBehaviorOn(trigger, seriesCB);
 				},
 				//
 				function(err) {
@@ -122,27 +165,29 @@ $(document).ready(function() {
 				}
 			);
 		},
-		testApplyWindowChange: function() {
+		testApplyWindowChange: function(cb) {
 			var shadowNav = this;
 
 			// to Device
-			if (shadowNav.windowSize <= shadowNav.deviceSize) {
-				if (shadowNav.deviceDisplay === false) {
+			if (shadowNav.windowWidth <= shadowNav.deviceSize) {
+				if (shadowNav.deviceDisplay !== true) {
 					// console.log('Display changed to device!');
 					shadowNav.removeNavBehavior();
+					shadowNav.assignNavToggleBehavior(cb);
 				} 
 				shadowNav.deviceDisplay = true;
 			// to Screen
 			}else{
-				if (shadowNav.deviceDisplay === true) {
+				if (shadowNav.deviceDisplay !== false) {
 					// console.log('Display changed to screen!');
-					shadowNav.assignNavBehavior();
+					shadowNav.targetResetMenuContainer(shadowNav.deviceNavToggle, true);
+					shadowNav.assignNavTriggerBehavior(cb);
 				} 
 				shadowNav.deviceDisplay = false;
 			}
 
 			// console.log(
-			// 	'Document windowSize:', shadowNav.windowSize//,
+			// 	'Document windowWidth:', shadowNav.windowWidth//,
 			// 	//'\ndeviceDisplay:', shadowNav.deviceDisplay
 			// );
 		},
@@ -152,36 +197,22 @@ $(document).ready(function() {
 
 	async.waterfall(
 		[
+			// target device navigation toggle and triggers
+			function(cb) {
+				shadowNav.targetNavComponents(cb);
+			},
+
 			// Init update on window size change event
 			function(cb) {
 				shadowNav.resizeEvent = $(window).resize(function() {
-					shadowNav.windowSize = $(document).width();
+					shadowNav.windowWidth = $(document).width();
 					shadowNav.testApplyWindowChange();
 				});
 				
-				// Initial set and test
-				shadowNav.windowSize = $(document).width();
-				shadowNav.testApplyWindowChange();
-
-				return cb(null);
-			},
-			// target triggers
-			function(cb) {
-				shadowNav.targetNavComponents(function(){
-					//console.log('navTriggers', shadowNav.navTriggers);
-					return cb(null);
-				});
-			},
-			// Behavior
-			function(cb) {
-				if (shadowNav.deviceDisplay) {
-					// do nothing...
-					return cb(null);
-				}else{
-					shadowNav.assignNavBehavior(cb);	
-				}
-			},
-			
+				// Initial set and test/set behaviors
+				shadowNav.windowWidth = $(document).width();
+				shadowNav.testApplyWindowChange(cb);
+			}			
 		],
 		function(err) {
 			if (err) {
