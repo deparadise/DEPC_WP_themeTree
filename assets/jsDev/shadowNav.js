@@ -36,6 +36,8 @@ $(document).ready(function() {
 		},
 		setShadowBehaviorOn: function(trigger, callback) {
 			// console.log('TEST trigger:', trigger);
+			$(trigger).off(); // reset of bindings
+
 					});
 				}
 			);
