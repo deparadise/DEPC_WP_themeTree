@@ -151,6 +151,7 @@
 
 // GULP COMMANDS
 gulp.task('default', [
+	'config_mode',
 	'do_compass',
 	'combine_js',
 	'serve',
