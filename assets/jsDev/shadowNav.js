@@ -41,6 +41,8 @@ $(document).ready(function() {
 			var toggleIsOpen = false;
 			var triggerIsToggle = ($(trigger)[0].className.includes('toggle-link'))? true : false;
 			// console.log('TEST triggerIsToggle:', triggerIsToggle);
+			var targetMenu = shadowNav.targetResetMenuContainer($(trigger), triggerIsToggle);
+
 					});
 				}
 			);
