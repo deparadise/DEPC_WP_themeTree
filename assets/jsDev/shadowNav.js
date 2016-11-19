@@ -135,7 +135,11 @@ $(document).ready(function() {
 				}
 			);
 		},
-		assignNavBehavior: function(cb) {
+		assignNavToggleBehavior: function(cb) {
+			shadowNav.setShadowBehaviorOn(this.deviceNavToggle, cb);
+			//return cb(null);
+		},
+		assignNavTriggerBehavior: function(cb) {
 			var shadowNav = this;
 
 			async.eachOfSeries(
