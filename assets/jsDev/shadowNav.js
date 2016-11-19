@@ -206,29 +206,10 @@ $(document).ready(function() {
 					shadowNav.testApplyWindowChange();
 				});
 				
-				// Initial set and test
-				shadowNav.windowSize = $(document).width();
-				shadowNav.testApplyWindowChange();
-
-				return cb(null);
-			},
-			// target triggers
-			function(cb) {
-				shadowNav.targetNavComponents(function(){
-					//console.log('navTriggers', shadowNav.navTriggers);
-					return cb(null);
-				});
-			},
-			// Behavior
-			function(cb) {
-				if (shadowNav.deviceDisplay) {
-					// do nothing...
-					return cb(null);
-				}else{
-					shadowNav.assignNavBehavior(cb);	
-				}
-			},
-			
+				// Initial set and test/set behaviors
+				shadowNav.windowWidth = $(document).width();
+				shadowNav.testApplyWindowChange(cb);
+			}			
 		],
 		function(err) {
 			if (err) {
