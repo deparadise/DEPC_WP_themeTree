@@ -70,6 +70,12 @@
 		'style.css'
 	];
 
+// CLEAN COMPONENTS
+	gulp.task('clean_up', function(){
+		// work around for compass overwrite fail
+		console.log('Removing:', buildComponents[1]);
+		gulp.src(buildComponents[1], {read: false}).pipe(clean());
+	});
 
 // COMPASS / SASS
 	gulp.task('do_compass', function(){
