@@ -85,7 +85,7 @@
 			compass({
 				sass: 'assets/sass',
 				css: '.',
-				comments: true,
+				comments: styleComments,
 				style: sassStyle, 							// expanded for dev / compressed for prod
 				image: 'assets/imgs'
 			})
