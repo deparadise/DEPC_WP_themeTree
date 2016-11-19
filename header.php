@@ -44,7 +44,7 @@
 					</a>
 				</h1>
 			</li>
-			<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>	
+			<li class="toggle-topbar menu-icon"><a class="toggle-link" href="#"><span></span></a></li>	
 		</ul><!-- .site-branding -->
 
 		<section id="site-navigation" class="main-navigation top-bar-section" role="navigation">
