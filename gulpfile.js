@@ -64,6 +64,12 @@
 	//  Designate dev php files
 	var staticTemplates = ['./**/*.php'];
 
+// TARGET COMPOENTS
+	var buildComponents = [
+		'allScript.js',
+		'style.css'
+	];
+
 
 // COMPASS / SASS
 	gulp.task('do_compass', function(){
