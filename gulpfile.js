@@ -25,7 +25,7 @@
 	var production = false;
 
 	// Workflow parameters
-	var 	production,
+	var 	styleComments,
 			sassStyle,
 			uglifyJS;
 	
