@@ -22,7 +22,16 @@ $(document).ready(function() {
 		},
 		targetResetMenuContainer: function(trigger, triggerIsToggle) {
 			var targetMenu = [];
+
+			if (triggerIsToggle) {
+				targetMenu = $('.main-navigation.top-bar-section');
+			}else{
+				targetMenu = $(trigger).children('.sub-menu');
+			}
+
+			//console.log('TEST targetMenu:', targetMenu);
 			targetMenu.removeAttr('style'); // reset
+			
 			return targetMenu;
 		},
 		setMainNavBehaviorOn: function(trigger, seriesCB) {
