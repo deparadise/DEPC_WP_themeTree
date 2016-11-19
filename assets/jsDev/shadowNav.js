@@ -1,10 +1,10 @@
 //console.log('shadowNav.js loaded...');
-var shadowNav = {};
+// var shadowNav = {};
 
 $(document).ready(function() {
 
-	shadowNav = {
-		windowSize: 0,
+	var shadowNav = {
+		windowWidth: 0,
 		deviceSize: 640,
 		deviceDisplay: false,
 		navTriggers: [],
