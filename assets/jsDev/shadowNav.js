@@ -162,7 +162,7 @@ $(document).ready(function() {
 				}
 			);
 		},
-		testApplyWindowChange: function() {
+		testApplyWindowChange: function(cb) {
 			var shadowNav = this;
 
 			// to Device
