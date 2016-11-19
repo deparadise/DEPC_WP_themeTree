@@ -167,15 +167,18 @@ $(document).ready(function() {
 
 			// to Device
 			if (shadowNav.windowWidth <= shadowNav.deviceSize) {
+				if (shadowNav.deviceDisplay !== true) {
 					// console.log('Display changed to device!');
 					shadowNav.removeNavBehavior();
+					shadowNav.assignNavToggleBehavior(cb);
 				} 
 				shadowNav.deviceDisplay = true;
 			// to Screen
 			}else{
-				if (shadowNav.deviceDisplay === true) {
+				if (shadowNav.deviceDisplay !== false) {
 					// console.log('Display changed to screen!');
-					shadowNav.assignNavBehavior();
+					shadowNav.targetResetMenuContainer(shadowNav.deviceNavToggle, true);
+					shadowNav.assignNavTriggerBehavior(cb);
 				} 
 				shadowNav.deviceDisplay = false;
 			}
