@@ -20,8 +20,8 @@ $(document).ready(function() {
 				return cb();
 			}
 		},
-		resetTargetMenuStyleAttr: function(trigger) {
-			var targetMenu = $(trigger).children('.sub-menu');
+		targetResetMenuContainer: function(trigger, triggerIsToggle) {
+			var targetMenu = [];
 			targetMenu.removeAttr('style'); // reset
 			return targetMenu;
 		},
