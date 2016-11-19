@@ -38,6 +38,7 @@ $(document).ready(function() {
 			// console.log('TEST trigger:', trigger);
 			$(trigger).off(); // reset of bindings
 
+			var toggleIsOpen = false;
 					});
 				}
 			);
