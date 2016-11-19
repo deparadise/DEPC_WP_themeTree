@@ -8,8 +8,8 @@ $(document).ready(function() {
 		deviceSize: 640,
 		deviceDisplay: null,
 		navTriggers: [],
-		targetNavComponents: function(cb) {		
-			this.navTriggers = jQuery(
+		deviceNavToggle: [],
+		targetNavComponents: function(cb) {
 				'.main-nav > .menu-item-has-children'
 			);//.filter('.main-nav > li');
 
