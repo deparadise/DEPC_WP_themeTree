@@ -88,7 +88,26 @@ $(document).ready(function() {
 				});
 			};
 
-			return seriesCB(null);
+			if (triggerIsToggle) {
+				// device menu toggle
+				$(trigger).click(function() {
+					//console.log('toggleIsOpen:', toggleIsOpen);
+					if (toggleIsOpen) {
+						shadowClose();
+						toggleIsOpen = false;
+					}else{
+						shadowOpen();
+						toggleIsOpen = true;
+					}
+				});
+			}else{
+				// Nav links hover
+				$(trigger).hover(shadowOpen, shadowClose);
+			}
+
+			if (callback) {
+				return callback(null);
+			}
 		},
 		removeNavBehavior: function(cb) {
 			var shadowNav = this;
