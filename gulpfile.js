@@ -158,3 +158,40 @@ gulp.task('default', [
 	'watch_these'
 ]);
 
+gulp.task('distribute_dev', function(){
+	production = false;
+
+	runSequence(
+	'clean_up',
+	'config_mode',
+	'do_compass',
+	'combine_js',
+	function (error) {
+		if (error) {
+			console.log(error);
+		} else {
+			console.log(' DEV RELEASE FINISHED SUCCESSFULLY');
+		}
+	});
+
+});
+
+gulp.task('distribute_production', function(){
+	production = true;
+
+	runSequence(
+	'clean_up',
+	'config_mode',
+	'do_compass',
+	'combine_js',
+	function (error) {
+		if (error) {
+			console.log(error);
+		} else {
+			console.log(' PRODUCTION RELEASE FINISHED SUCCESSFULLY! :0)');
+		}
+	});
+
+});
+
+
