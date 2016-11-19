@@ -39,6 +39,8 @@ $(document).ready(function() {
 			$(trigger).off(); // reset of bindings
 
 			var toggleIsOpen = false;
+			var triggerIsToggle = ($(trigger)[0].className.includes('toggle-link'))? true : false;
+			// console.log('TEST triggerIsToggle:', triggerIsToggle);
 					});
 				}
 			);
