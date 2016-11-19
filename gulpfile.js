@@ -81,9 +81,9 @@
 // COMBINE JS
 	gulp.task('combine_js', ['check_js'], function(){
 		gulp.src(scriptSources)		
-		.pipe(concat('assets/js/allThemeControl.js'))
+		.pipe(concat('allScript.js'))
 		.pipe(gulpIf(uglifyJS, uglify()))
-		.pipe(gulp.dest('.'))
+		.pipe(gulp.dest('.'));
 	});
 
 
