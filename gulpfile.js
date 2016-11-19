@@ -29,18 +29,30 @@
 			sassStyle,
 			uglifyJS;
 	
-	
-	if (production) {
-		// Production parameters
-		 sassStyle = 'compressed';
-		 uglifyJS = true;
-		 gUtil.log('Process for production!');
-	}else{
-		// Development parameters
-		 sassStyle = 'expanded';
-		 uglifyJS = false;
-		 gUtil.log('Process for development!');
-	}
+
+// MODE CONFIGURATION
+	gulp.task('config_mode', function(){
+		if (production) {
+			gUtil.log('Production config!');
+			// Production parameters
+			styleComments = false;
+			sassStyle = 'compressed';
+			uglifyJS = true;
+		}else{
+			gUtil.log('Development config!');
+			// Development parameters
+			styleComments = true;
+			sassStyle = 'expanded';
+			uglifyJS = false;
+		}
+
+		console.log(
+			'\nproduction:', production,
+			'\nstyleComments:', styleComments,
+			'\nsassStyle:', sassStyle,
+			'\nuglifyJS:', uglifyJS
+		);
+	});
 
 
 // ASSETS
