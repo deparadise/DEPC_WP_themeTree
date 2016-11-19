@@ -43,6 +43,15 @@ $(document).ready(function() {
 			// console.log('TEST triggerIsToggle:', triggerIsToggle);
 			var targetMenu = shadowNav.targetResetMenuContainer($(trigger), triggerIsToggle);
 
+			var targetMenuHeight = 0;
+
+			if (triggerIsToggle) {
+				targetMenuHeight = targetMenu.children('.main-nav').height() + 75;
+			}else{
+				targetMenuHeight = $(targetMenu).height();
+			}
+			// console.log('TEST targetMenuHeight:', targetMenuHeight);
+
 					});
 				}
 			);
