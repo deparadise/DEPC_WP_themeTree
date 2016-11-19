@@ -7,6 +7,8 @@
 		jsHint 		= require('gulp-jshint'),
 		cache		= require('gulp-cached'),
 		stylish		= require('jshint-stylish'),
+		clean		= require('gulp-clean'),
+		runSequence = require('run-sequence'),
 
 		browserSync = require('browser-sync'),				//https://browsersync.io/docs/gulp
 		//livereload = require('gulp-livereload'),
