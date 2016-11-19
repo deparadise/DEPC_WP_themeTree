@@ -10,8 +10,11 @@ $(document).ready(function() {
 		navTriggers: [],
 		deviceNavToggle: [],
 		targetNavComponents: function(cb) {
+			this.deviceNavToggle = $('.toggle-topbar a');
+
+			this.navTriggers = $(
 				'.main-nav > .menu-item-has-children'
-			);//.filter('.main-nav > li');
+			);
 
 			if (cb) {
 				return cb();
