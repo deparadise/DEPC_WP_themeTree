@@ -194,6 +194,11 @@ $(document).ready(function() {
 
 	async.waterfall(
 		[
+			// target device navigation toggle and triggers
+			function(cb) {
+				shadowNav.targetNavComponents(cb);
+			},
+
 			// Init update on window size change event
 			function(cb) {
 				shadowNav.resizeEvent = $(window).resize(function() {
