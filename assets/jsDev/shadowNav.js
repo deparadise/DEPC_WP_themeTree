@@ -147,7 +147,7 @@ $(document).ready(function() {
 				shadowNav.navTriggers,
 				//
 				function(trigger, index, seriesCB) {
-					shadowNav.setMainNavBehaviorOn(trigger, seriesCB);
+					shadowNav.setShadowBehaviorOn(trigger, seriesCB);
 				},
 				//
 				function(err) {
