@@ -118,7 +118,7 @@ $(document).ready(function() {
 				//
 				function(trigger, index, seriesCB) {
 					$(trigger).off();
-					var targetMenu = shadowNav.resetTargetMenuStyleAttr(trigger);
+					var targetMenu = shadowNav.targetResetMenuContainer($(trigger));
 					
 					return seriesCB(null);
 				},
