@@ -1,10 +1,10 @@
 {
-  "name": "depc_styro",
-  "version": "0.0.1",
-  "description": "My starter theme for DEPC WordPress projects",
+  "name": "DEPC_WP_themeTree",
+  "version": "0.0.1-f: Gulpfile supports server side distribution of dev and production build components",
+  "description": "My starter theme environment for DEPC WordPress projects",
   "repository": {
     "type": "git",
-    "url": "?.git"
+    "url": "https://github.com/deparadise/DEPC_WP_themeTree"
   },
   "author": "David Pineda",
   "devDependencies": {
