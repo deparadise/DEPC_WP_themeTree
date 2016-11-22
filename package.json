@@ -1,7 +1,7 @@
 {
   "name": "DEPC_WP_themeTree",
-  "version": "0.0.1-f: Gulpfile supports server side distribution of dev and production build components",
-  "description": "My starter theme environment for DEPC WordPress projects",
+  "version": "0.0.1-f",
+  "description": "DEPC WordPress starter theme : Gulpfile supports server side distribution of dev and production build components",
   "repository": {
     "type": "git",
     "url": "https://github.com/deparadise/DEPC_WP_themeTree"
