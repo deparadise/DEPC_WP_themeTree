@@ -41,20 +41,22 @@ nav.site-header {
 		li {
 			h1 {
 				a {
-					width: 300px !important;
+					width: 300px;
 					//border: 1px solid #bada55;
 				}
 				.logo {
 					position: absolute;
-					top: -35px;
-					width: 85px;
+					top: -20px;
+					left: -15px;
+					width: 100px;
 					//border: 1px solid fuchsia;
 				}
 				.logo-type {
 					position: absolute;
-					top: -2px;
-					left: 95px;
-					height: 50px;
+					top: 15px;
+					left: 20px;
+					height: auto;
+					width: 300px;
 					//border: 1px solid orange;
 				}
 			}
@@ -88,84 +90,115 @@ nav.site-header {
 	nav.site-header {
 		//display: none;
 		//background-color: green;
+
+		ul.site-branding {
+			display: block;
+			width: 400px;
+			height: 80px;
+			li {
+				h1 {
+					a {
+						width: 300px;
+						//border: 1px solid #bada55;
+					}
+					.logo {
+						position: absolute;
+						top: -20px;
+						left: -15px;
+						width: 100px;
+						//border: 1px solid fuchsia;
+					}
+					.logo-type {
+						position: absolute;
+						top: 0px;
+						left: 5px;
+						height: auto;
+						width: 400px;
+						max-width: 200%;
+						//border: 1px solid orange;
+					}
+				}
+			}
+		}
+
 		.main-navigation.top-bar-section {
 			overflow: visible;
 			height: 0px;
 			// border: 1px solid green;
 
-		ul.main-nav {
-			position: relative;
-			top: -1px;
-			display: block;
-			padding: 0 2em 0 0;
-			li {
-				background: none;
-				a {
-					font-size: 1em;
+			ul.main-nav {
+				position: relative;
+				top: 0px;
+				display: block;
+				padding: 0 2em 0 0;
+				li {
 					background: none;
-					height: 60px;
-					line-height: 3.75em;
-				}
-				ul.sub-menu {
-					position: absolute;
-					padding-left: 0;
-					display: none;
-					z-index: 1;
-					//border: 1px solid orange;
-					li {
-						width: 175px;
-						float: none;
-						a {
-							background-color: $transparent-black;
-						}
-						a:after {
-							content: none;
+					a {
+						font-size: 1em;
+						background: none;
+						height: 60px;
+						line-height: 3.75em;
+					}
+					ul.sub-menu {
+						position: absolute;
+						padding-left: 0;
+						display: none;
+						z-index: 1;
+						//border: 1px solid orange;
+						li {
+							width: 175px;
+							float: none;
+							a {
+								background-color: $transparent-black;
+							}
+							a:after {
+								content: none;
+							}
 						}
 					}
+					ul.sub-menu ul.sub-menu {
+						display: none;
+						top: 0px;
+						left: -175px;
+						//border: 1px solid orange;
+					}
 				}
-				ul.sub-menu ul.sub-menu {
-					display: none;
-					top: 0px;
-					left: -175px;
-					//border: 1px solid orange;
+				li:hover {
+					background-color: $transparent-black;
+				}
+				li.menu-item-has-children:hover > ul.sub-menu {
+					display: block;
+				} 
+				li.menu-item-has-children a:after {
+					position: relative;
+					float: right;
+					top: 25px;
+					right: -7px;
+					border: 5px inset;
+					content: "";
+					display: block;
+					height: 0;
+					width: 0;
+					border-color: rgba(255,255,255,.4) transparent transparent;
+					border-top-style: solid;
+					margin-top: -2.5px;
+				}
+				li.menu-item-has-children ul.sub-menu li.menu-item-has-children > a:before{
+					position: relative;
+					float: left;
+					border: 5px inset;
+					content: "";
+					display: block;
+					height: 0;
+					width: 0;
+					top: 18px;
+					left: -5px;
+					border-color: rgba(255,255,255,.4) transparent transparent;
+					border-top-style: solid;
+					transform: rotate(90deg);
+					//border: 1px solid green;
 				}
 			}
-			li:hover {
-				background-color: $transparent-black;
-			}
-			li.menu-item-has-children:hover > ul.sub-menu {
-				display: block;
-			} 
-			li.menu-item-has-children a:after {
-				position: relative;
-				float: right;
-				top: 25px;
-				right: -7px;
-				border: 5px inset;
-				content: "";
-				display: block;
-				height: 0;
-				width: 0;
-				border-color: rgba(255,255,255,.4) transparent transparent;
-				border-top-style: solid;
-				margin-top: -2.5px;
-			}
-			li.menu-item-has-children ul.sub-menu li.menu-item-has-children > a:before{
-				position: relative;
-				float: left;
-				border: 5px inset;
-				content: "";
-				display: block;
-				height: 0;
-				width: 0;
-				top: 18px;
-				left: -5px;
-				border-color: rgba(255,255,255,.4) transparent transparent;
-				border-top-style: solid;
-				transform: rotate(90deg);
-				//border: 1px solid green;
-			}
-		}
 
 		}
 	}
