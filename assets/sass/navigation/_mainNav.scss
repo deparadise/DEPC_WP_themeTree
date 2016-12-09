@@ -19,14 +19,15 @@ nav.site-header {
 	position: absolute;
 	z-index: 9999;
 	width: 100%;
-	top: 35px;
-	border-top: 1px solid white;
-	border-bottom: 1px solid white;
-	background-color: $transparent-red;
+	height: 60px;
+	top: 0px;
+	// border-top: 1px solid white;
+	// border-bottom: 1px solid white;
+	background-color: $transparent-black;
 	font-family: $font__main;
 	overflow: visible;
 	.toggle-topbar.menu-icon a {
-		height: 45px;
+		height: 60px;
 		top: -7px;
 		//border: 1px solid fuchsia;
 		span::after {
@@ -68,8 +69,10 @@ nav.site-header {
 			li {
 				a {
 					position: relative;
-					font-size: 1.15em;
+					font-size: 1em;
 					font-family: $font__main;
+					font-weight: 300;
+					letter-spacing: 1px;
 				}
 				ul.sub-menu {
 					padding-left: 1.5em;
@@ -94,12 +97,14 @@ nav.site-header {
 			position: relative;
 			top: -1px;
 			display: block;
-			padding: 0 5em 0 0;
+			padding: 0 2em 0 0;
 			li {
 				background: none;
 				a {
-					font-size: 1.15em;
+					font-size: 1em;
 					background: none;
+					height: 60px;
+					line-height: 3.75em;
 				}
 				ul.sub-menu {
 					position: absolute;
@@ -109,8 +114,9 @@ nav.site-header {
 					//border: 1px solid orange;
 					li {
 						width: 175px;
+						float: none;
 						a {
-							background-color: $solid-red;
+							background-color: $transparent-black;
 						}
 						a:after {
 							content: none;
@@ -125,7 +131,7 @@ nav.site-header {
 				}
 			}
 			li:hover {
-				background-color: $solid-red;
+				background-color: $transparent-black;
 			}
 			li.menu-item-has-children:hover > ul.sub-menu {
 				display: block;
