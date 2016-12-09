@@ -25,12 +25,14 @@
 		color: #fff;
 		//border: 1px solid red;
 		h1 {
+			display: inline-block;
 			color: #fff;
-			font-size: 3em;
+			font-size: 2.5em;
 			padding: 0 .5em;
 			letter-spacing: 2px;
 			//text-shadow: 3px 3px 10px #555;
 			@include text-shadows;
+			background-color: $transparent-black;
 		}
 	}
 }
