@@ -39,8 +39,8 @@
 			<li class="name site-title">
 				<h1>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img class="logo" src="<?php bloginfo('template_url');?>/assets/imgs/WreckCheck_Logo.png" alt="hick-up">
-						<img class="logo-type" src="<?php bloginfo('template_url');?>/assets/imgs/WreckCheck_Logo_Type.png" alt="<?php bloginfo( 'name' ); ?>">
+						<img class="logo" src="<?php bloginfo('template_url');?>/assets/imgs/logo.png" alt="hick-up">
+						<img class="logo-type" src="<?php bloginfo('template_url');?>/assets/imgs/branding.png" alt="<?php bloginfo( 'name' ); ?>">
 					</a>
 				</h1>
 			</li>
