@@ -6,7 +6,7 @@
 	<?php // DEPC todo: account for archive template
 	if(is_front_page()) {
 	
-		if ( function_exists('ACF') ) {
+		if ( function_exists('ACF') && count(get_field('simple_slider')) != 0) {
 			if (get_field('simple_slider') && is_page_template('home.php')) {
 				$url_collection = get_field('simple_slider');
 				$url_collection = str_getcsv($url_collection, ",");
