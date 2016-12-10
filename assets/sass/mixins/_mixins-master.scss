@@ -37,3 +37,8 @@
 	font-family: $font__main;
 }
 
+@mixin header-mark {
+	@include text-shadows;
+	background-color: $transparent-black;
+	border-left: 7px solid $techno-green;
+}
