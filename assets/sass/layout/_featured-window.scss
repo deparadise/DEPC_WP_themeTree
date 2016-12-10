@@ -1,14 +1,10 @@
 .featured-window {
 	position: relative;
-	height: 400px;
+	height: 350px;
 	overflow: hidden;
-	//border: 1px solid fuchsia;
+	// border: 1px solid fuchsia;
 	img {
-		// During mobile
-		//height: 400px; 
-		//max-width: 200%;
-
-
+		// See media queries below
 	}
 	.img-screen {
 		position: absolute;
@@ -27,7 +23,6 @@
 		h1 {
 			display: inline-block;
 			color: #fff;
-			font-size: 2.5em;
 			padding: 0 .5em;
 			letter-spacing: 2px;
 			//text-shadow: 3px 3px 10px #555;
@@ -36,17 +31,20 @@
 	}
 }
 
-///
+/// MEDIA QUERIES
 @media #{$small-up} {
 	.featured-window {
 		img {
 			max-width: 200%;
-			height: auto;
-			width: 140%;
+			height: 100%;
+			width: auto;
 		}
 
 		.home-page-header {
 			// border: 1px solid orange;
+			h1 {
+				font-size: 1.5em;
+			}
 		}
 	}
 	.single .featured-window {
@@ -59,12 +57,21 @@
 }
 
 
-@media #{$medium-only} {
+@media #{$medium-up} {
 	.featured-window {
+		height: 500px;
+		// border: 1px solid red;
 		img {
 			max-width: 300%;
 			width: 100%;
 			height: auto;
+		}
+
+		.home-page-header {
+			// border: 1px solid orange;
+			h1 {
+				font-size: 2.5em;
+			}
 		}
 	}
 	.single .featured-window {
@@ -76,7 +83,6 @@
 
 @media #{$large-up} {
 	.featured-window {
-		height: 500px;
 		img {
 			width: 100%;
 		}
