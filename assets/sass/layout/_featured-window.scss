@@ -23,7 +23,7 @@
 		position: absolute;
 		bottom: 50px;
 		color: #fff;
-		//border: 1px solid red;
+		// border: 1px solid red;
 		h1 {
 			display: inline-block;
 			color: #fff;
@@ -31,8 +31,7 @@
 			padding: 0 .5em;
 			letter-spacing: 2px;
 			//text-shadow: 3px 3px 10px #555;
-			@include text-shadows;
-			background-color: $transparent-black;
+			@include header-mark;
 		}
 	}
 }
@@ -44,6 +43,10 @@
 			max-width: 200%;
 			height: auto;
 			width: 140%;
+		}
+
+		.home-page-header {
+			// border: 1px solid orange;
 		}
 	}
 	.single .featured-window {
