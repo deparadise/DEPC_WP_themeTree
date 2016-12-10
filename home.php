@@ -39,6 +39,6 @@ get_header(); ?>
 
 <?php get_sidebar('presentation-2'); ?>
 
-<?php get_template_part('template-parts/widget', 'roleCall'); ?>
+<?php get_template_part('template-parts/widget', 'gloryContent'); ?>
 
 <?php get_footer(); ?>
