@@ -38,7 +38,7 @@
 			if (get_field('tagline') && is_page_template('home.php')) {
 
 				?>
-				<header class="home-page-header columns medium-8 medium-push-2">
+				<header class="home-page-header columns medium-10 medium-push-1">
 					<span class="tag-1"><h1><?php echo get_field('tagline') ?></h1></span>
 				</header>
 				<?php
