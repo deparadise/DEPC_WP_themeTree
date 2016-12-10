@@ -67,6 +67,7 @@ nav.site-header {
 		height: 0px;
 		// border: 1px solid fuchsia;
 		ul.main-nav {
+			// background-color: $transparent-black;
 			//display: none;
 			li {
 				a {
@@ -127,8 +128,9 @@ nav.site-header {
 			// border: 1px solid green;
 
 			ul.main-nav {
-				position: relative;
+				position: absolute;
 				top: 0px;
+				right: 0px;
 				display: block;
 				padding: 0 2em 0 0;
 				li {
