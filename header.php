@@ -52,7 +52,7 @@
 				'theme_location' => 'primary',
 				'menu' => 'Primary Menu',
 				'container' => false,
-				'items_wrap' => '<ul class="main-nav right">%3$s</ul>'
+				'items_wrap' => '<ul class="main-nav">%3$s</ul>'
 			) ); ?>
 		</section><!-- #site-navigation -->
 	</nav>
