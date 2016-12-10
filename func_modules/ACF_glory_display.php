@@ -3,12 +3,12 @@
 	{
 		register_field_group(array (
 			'id' => 'acf_home-page-partners-display',
-			'title' => 'Home Page Partners Display',
+			'title' => 'Home Page Glory Display',
 			'fields' => array (
 				array (
 					'key' => 'field_574b7fb61adc5',
-					'label' => 'Partners Display',
-					'name' => 'partners_display',
+					'label' => '',
+					'name' => 'glory_display',
 					'type' => 'wysiwyg',
 					'default_value' => '',
 					'toolbar' => 'full',

@@ -211,8 +211,8 @@ require get_template_directory() . '/func_modules/admin_menu_control.php';
 /* ACF: Tagline */
 require get_template_directory() . '/func_modules/ACF_tagline.php';
 
-/* ACF: Partners Display */
-require get_template_directory() . '/func_modules/ACF_partners_display.php';
+/* ACF: Glory Display */
+require get_template_directory() . '/func_modules/ACF_glory_display.php';
 
 /* ACF: Event Date */
 require get_template_directory() . '/func_modules/ACF_event_date.php';
