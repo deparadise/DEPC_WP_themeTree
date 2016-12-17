@@ -46,9 +46,10 @@ nav.site-header {
 				}
 				.logo {
 					position: absolute;
-					top: -20px;
-					left: -15px;
-					width: 100px;
+					top: -4px;
+					left: -7px;
+					width: 75px;
+					opacity: .25;
 					//border: 1px solid fuchsia;
 				}
 				.logo-type {
@@ -58,6 +59,13 @@ nav.site-header {
 					height: auto;
 					width: 300px;
 					//border: 1px solid orange;
+				}
+				.site-title {
+					display: block;
+					font-size: 1.75em;
+					margin: 10px 0 0 55px;
+					font-weight: 200;
+					font-family: $font__script;
 				}
 			}
 		}
@@ -103,10 +111,6 @@ nav.site-header {
 						//border: 1px solid #bada55;
 					}
 					.logo {
-						position: absolute;
-						top: -20px;
-						left: -15px;
-						width: 100px;
 						//border: 1px solid fuchsia;
 					}
 					.logo-type {

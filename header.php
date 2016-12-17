@@ -40,7 +40,7 @@
 				<h1>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<img class="logo" src="<?php bloginfo('template_url');?>/assets/imgs/logo.png" alt="Dragon coin">
-						<img class="logo-type" src="<?php bloginfo('template_url');?>/assets/imgs/branding.png" alt="<?php bloginfo( 'name' ); ?>">
+						<span class="site-title"><?php bloginfo( 'name' ); ?></span>
 					</a>
 				</h1>
 			</li>
