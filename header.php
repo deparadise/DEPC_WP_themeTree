@@ -41,6 +41,8 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<img class="logo" src="<?php bloginfo('template_url');?>/assets/imgs/WreckCheck_Logo.png" alt="hick-up">
 						<img class="logo-type" src="<?php bloginfo('template_url');?>/assets/imgs/WreckCheck_Logo_Type.png" alt="<?php bloginfo( 'name' ); ?>">
+						<span class="site-descrip"><?php bloginfo( 'description' ); ?></span>
+						<span class="site-title"><?php bloginfo( 'name' ); ?></span>
 					</a>
 				</h1>
 			</li>
