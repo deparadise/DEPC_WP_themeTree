@@ -60,12 +60,17 @@ nav.site-header {
 					width: 300px;
 					//border: 1px solid orange;
 				}
+				.site-descrip {
+					font-size: 30px;
+					@include customFont($font__script);
+				}
 				.site-title {
 					display: block;
-					font-size: 1.75em;
+					font-size: 40px;
+					font-style: normal;
 					margin: 10px 0 0 55px;
 					font-weight: 200;
-					font-family: $font__script;
+					@include customFont($font__gamer);
 				}
 			}
 		}

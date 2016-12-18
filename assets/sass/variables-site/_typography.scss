@@ -1,6 +1,23 @@
 $font__main: Lato;
-$font__script: 'Nothing You Could Do', cursive;
+$font__typewriter: 'Special Elite', cursive;
+$font__gamer: 'Press Start 2P', cursive;
+$font__script: 'Yellowtail', cursive;
+// $font__script: 'Nothing You Could Do', cursive;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+// call a font specifically like...
+@mixin scriptFont {
+	font-family: $font__script;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// adaptive font call as...
+@mixin customFont($requested) {
+	font-family: $requested;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
