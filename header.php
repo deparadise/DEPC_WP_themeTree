@@ -20,7 +20,7 @@
 <?php wp_head(); ?>
 
 <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
-<link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700|Lato:400,400italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700|Lato:400,400italic|Nothing+You+Could+Do|Mr+Dafoe|Press+Start+2P|Special+Elite|Permanent+Marker|Yellowtail' rel='stylesheet' type='text/css'>
 
 <!-- TEMP libraries: TODO: Make library and asset inclusion by gulp -->
 <script src="<?php bloginfo('template_url');?>/assets/libs/slick.min.js"></script>
