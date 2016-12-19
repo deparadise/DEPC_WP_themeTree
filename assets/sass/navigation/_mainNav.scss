@@ -41,6 +41,7 @@ nav.site-header {
 		li {
 			h1 {
 				a {
+					padding: 0;
 					width: 300px;
 					//border: 1px solid #bada55;
 				}
@@ -49,7 +50,7 @@ nav.site-header {
 					top: -4px;
 					left: -7px;
 					width: 75px;
-					opacity: .25;
+					opacity: 0;
 					//border: 1px solid fuchsia;
 				}
 				.logo-type {
@@ -61,14 +62,20 @@ nav.site-header {
 					//border: 1px solid orange;
 				}
 				.site-descrip {
+					transform: rotate(-10deg);
+					position: absolute;
+					top: 0px;
+					left: 0px;
 					font-size: 30px;
 					@include customFont($font__script);
 				}
 				.site-title {
+					position: relative;
+					top: 24px;
 					display: block;
-					font-size: 40px;
+					font-size: 35px;
 					font-style: normal;
-					margin: 10px 0 0 55px;
+					margin: 0 0 0 35px;
 					font-weight: 200;
 					@include customFont($font__gamer);
 				}
