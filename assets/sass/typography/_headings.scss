@@ -1,18 +1,18 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	@include font-1;
 	font-size: 1.5em;
+	color: $lazer-blue;
+	@include customFont($font__gamer);
 }
 
 h1 {
-	font-size: 2em;
-	color: $techno-green;
+	font-size: 1.75em;
+	
 	//border: 1px solid red;
 }
 
 h2 {
 	font-size: 1.8em;
-	color: $techno-green;
 	//border: 1px solid green;
 }
 

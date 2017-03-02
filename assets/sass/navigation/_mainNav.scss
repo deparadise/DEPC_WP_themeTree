@@ -43,14 +43,14 @@ nav.site-header {
 				a {
 					padding: 0;
 					width: 300px;
-					//border: 1px solid #bada55;
+					// border: 1px solid #bada55;
 				}
 				.logo {
 					position: absolute;
-					top: -4px;
-					left: -7px;
-					width: 75px;
-					opacity: 0;
+					top: 5px;
+					left: 175px;
+					width: 150px;
+					opacity: 1;
 					//border: 1px solid fuchsia;
 				}
 				.logo-type {
@@ -67,6 +67,7 @@ nav.site-header {
 					top: 0px;
 					left: 0px;
 					font-size: 30px;
+					color: $lazer-pink;
 					@include customFont($font__script);
 				}
 				.site-title {
@@ -77,6 +78,8 @@ nav.site-header {
 					font-style: normal;
 					margin: 0 0 0 35px;
 					font-weight: 200;
+					text-shadow: 3px 3px 5px #222;
+					color: $lazer-blue;
 					@include customFont($font__gamer);
 				}
 			}
@@ -119,7 +122,8 @@ nav.site-header {
 			li {
 				h1 {
 					a {
-						width: 300px;
+						width: 320px;
+						height: 115px;
 						//border: 1px solid #bada55;
 					}
 					.logo {

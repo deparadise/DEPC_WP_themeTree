@@ -1,7 +1,6 @@
 article {
 	position: relative;
 	//border-left: 1px solid #555;
-	@include content-shadow;
 	padding-left: 1em;
 	padding-right: 1em;
 	overflow: hidden;
