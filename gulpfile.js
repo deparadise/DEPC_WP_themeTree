@@ -141,7 +141,7 @@
 			//startPath: 'http://themebench03.dev/', 			// specific starting point
 			open: true,
 			proxy: {
-				target: 'themebench03.dev',
+				target: 'dep-portfolio.themebench.dev',
 				ws: true
 			}//,
 			// server: {} 			// MAMP takes care of this...
