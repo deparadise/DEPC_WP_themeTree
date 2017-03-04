@@ -137,11 +137,11 @@
 	gulp.task('serve', function(){
 		// Browser Sync otions: https://browsersync.io/docs/options
 		browserSync.init({
-			//port: 3000,
+			port: 3003,
 			//startPath: 'http://themebench03.dev/', 			// specific starting point
 			open: true,
 			proxy: {
-				target: 'themebench03.dev',
+				target: 'themetree.dev',
 				ws: true
 			}//,
 			// server: {} 			// MAMP takes care of this...
