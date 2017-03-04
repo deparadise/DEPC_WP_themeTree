@@ -16,7 +16,7 @@
 		concat = require('gulp-concat'),
 		uglify = require('gulp-uglify'),
 		gulpIf = require('gulp-if'),
-		
+
 		gUtil = require('gulp-util');
 
 // SETTINGS
@@ -28,7 +28,7 @@
 	var 	styleComments,
 			sassStyle,
 			uglifyJS;
-	
+
 
 // MODE CONFIGURATION
 	gulp.task('config_mode', function(){
@@ -60,7 +60,7 @@
 	var sassSources 	=	['assets/sass/**/*.scss'];
 
 	// Designate dev js files
-	var scriptSources = ['assets/jsDev/*.js']; 
+	var scriptSources = ['assets/jsDev/*.js'];
 	//  Designate dev php files
 	var staticTemplates = ['./**/*.php'];
 
@@ -106,7 +106,7 @@
 
 // COMBINE JS
 	gulp.task('combine_js', ['check_js'], function(){
-		gulp.src(scriptSources)		
+		gulp.src(scriptSources)
 		.pipe(concat(buildComponents[0]))
 		.pipe(gulpIf(uglifyJS, uglify()))
 		.pipe(gulp.dest('.'));
@@ -193,5 +193,3 @@ gulp.task('distribute_production', function(){
 	});
 
 });
-
-
