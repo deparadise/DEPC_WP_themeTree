@@ -126,8 +126,8 @@ function depc_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	
-	// Misc. other widget area or template	
+
+	// Misc. other widget area or template
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'depc' ),
 		'id'            => 'sidebar-1',
@@ -146,14 +146,14 @@ add_action( 'widgets_init', 'depc_widgets_init' );
 function depc_scripts() {
 	// Normalize.css
 	wp_enqueue_style( 'Normalize', get_template_directory_uri() . '/assets/libs/normalize.min.css');
-	
+
 	// Foundation
 	wp_enqueue_style( 'Foundation-styles', get_template_directory_uri() . '/assets/libs/foundation/foundation.min.css');
 	wp_enqueue_script( 'Foundation-scripts', get_template_directory_uri() . '/assets/libs/foundation/foundation.min.js', array(), '01', true );
-	
+
 	// style.css
 	wp_enqueue_style( 'depc-style', get_stylesheet_uri() );
-	
+
 	// Collected custom scripts
 	wp_enqueue_script( 'depc-all-script', get_template_directory_uri() . '/allScript.js', array(), '01', true );
 
@@ -216,7 +216,3 @@ require get_template_directory() . '/func_modules/ACF_event_date.php';
 
 /* ACF: Simple Slider */
 require get_template_directory() . '/func_modules/ACF_simple_slider.php';
-
-
-
-
