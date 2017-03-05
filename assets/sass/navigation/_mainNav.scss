@@ -1,5 +1,9 @@
 // #masthead
 nav.site-header.expanded {
+	.main-navigation.top-bar-section {
+		width: 100%;
+		// border: 2px solid purple;
+	}
 	.main-navigation {
 		ul.main-nav {
 			display: block;
@@ -13,6 +17,9 @@ nav.site-header.expanded {
 
 nav.site-header {
 	// default WP menu
+	.main-navigation {
+		// border: 2px solid #bada55;
+	}
 	.main-navigation .menu ul {
 		display: none;
 		//border:  1px solid fuchsia;
@@ -28,6 +35,9 @@ nav.site-header.expanded  {
 nav.site-header.top-bar.expanded {
 	position: relative;
 	height: 115px;
+	.title-area {
+		background: none;
+	}
 }
 nav.site-header {
 	position: relative;
@@ -51,12 +61,14 @@ nav.site-header {
 			//border: 2px solid red;
 		}
 	}
-	ul.site-branding {
+	.site-branding {
 		display: block;
+		// border: 1px solid fuchsia;
 		li {
 			h1 {
 				a {
-					width: 300px !important;
+					position: relative;
+					width: 250px !important;
 					//border: 1px solid #bada55;
 				}
 				.logo {
@@ -82,7 +94,7 @@ nav.site-header {
 	}
 	ul.main-nav {
 		margin: 70px 0 0 0;
-		border-bottom: 1px solid #777;
+		// border-bottom: 1px solid #777;
 		display: none;
 		li {
 			a {
@@ -100,20 +112,47 @@ nav.site-header {
 	}
 }
 
+// @media only screen and (min-width: 640px) and (max-width: 820px) {
+// 	nav.site-header {
+// 		border: 1px solid green;
+// 		ul.main-nav {
+//
+// 		}
+// 	}
+// 	.site-branding {
+// 		border: 1px solid red;
+// 		// .toggle-topbar.menu-icon {
+// 		// 	right: -6px;
+// 		// 	display: block;
+// 		// 	border: 1px solid purple;
+// 		//
+// 		// }
+// 	}
+// }
+
 // DESKTOP .main-nav
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: $small-breakpoint) {
 	nav.site-header {
 		height: 95px;
 		//display: none;
 		//background-color: green;
+		.site-branding {
+			margin: 0 20px 0 0;
+			// border: 1px solid orange;
+		}
+		.main-navigation.top-bar-section {
+			// border: 1px solid red;
+			left: auto !important;
+		}
 		ul.main-nav {
 			position: relative;
 			// width: 200px; // Closses in the nav for column effect
-			top: -1px;
+			top: 0px;
 			display: block;
-			margin: 50px 0 0 0;
+			margin: 49px 0 0 145px;
 			padding: 0 0 0 0;
-			//border: 1px solid fuchsia;
+			// background-image: url("assets/imgs/concrete.png");
+			// border: 1px solid fuchsia;
 			li {
 				position: relative;
 				background: none;

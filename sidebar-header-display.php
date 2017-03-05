@@ -13,7 +13,7 @@ if ( ! is_active_sidebar( 'header-display' ) ) {
 ?>
 
 <div id="secondary-hd" class="widget-area display row" role="complementary">
-	<div class="columns medium-8 medium-push-2">
+	<div class="columns medium-10 medium-push-1">
 		<?php dynamic_sidebar( 'header-display' ); ?>
 	</div>
 </div><!-- #secondary -->

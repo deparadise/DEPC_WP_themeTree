@@ -35,26 +35,28 @@
 
 	<!-- FOUNDATION TOPBAR responsive nav -->
 	<nav id="masthead" class="site-header top-bar row" data-topbar>
-		<ul class="site-branding title-area">
-			<li class="name site-title">
-				<h1>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img class="logo" src="<?php bloginfo('template_url');?>/assets/imgs/uiPromos_logo.png" alt="hick-up">
-						<!-- <img class="logo-type" src="<?php //bloginfo('template_url');?>/assets/imgs/WreckCheck_Logo_Type.png" alt="<?php //bloginfo( 'name' ); ?>"> -->
-					</a>
-				</h1>
-			</li>
-			<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>	
-		</ul><!-- .site-branding -->
-
-		<section id="site-navigation" class="main-navigation top-bar-section" role="navigation">
+		<div class="site-branding columns medium-3 medium-push-1">
+			<ul class="title-area">
+				<li class="name site-title">
+					<h1>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img class="logo" src="<?php bloginfo('template_url');?>/assets/imgs/uiPromos_logo.png" alt="hick-up">
+							<!-- <img class="logo-type" src="<?php //bloginfo('template_url');?>/assets/imgs/WreckCheck_Logo_Type.png" alt="<?php //bloginfo( 'name' ); ?>"> -->
+						</a>
+					</h1>
+				</li>
+				<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+			</ul>
+		</div><!-- .site-branding -->
+		<!-- <div class="site-navigation-derp columns medium-3 medium-pull-1"></div> -->
+		<div class="main-navigation top-bar-section columns small-12 medium-6 medium-pull-1" role="navigation">
 			<?php wp_nav_menu( array(
 				'theme_location' => 'primary',
 				'menu' => 'Primary Menu',
 				'container' => false,
-				'items_wrap' => '<ul class="main-nav right">%3$s</ul>'
+				'items_wrap' => '<ul id="site-navigation" class="main-nav right">%3$s</ul>'
 			) ); ?>
-		</section><!-- #site-navigation -->
+		</div><!-- #site-navigation -->
 	</nav>
 	<!-- END TOPBAR responsive nav -->
 
