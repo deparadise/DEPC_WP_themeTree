@@ -30,7 +30,7 @@ nav.site-header.top-bar.expanded {
 	height: 115px;
 }
 nav.site-header {
-	position: absolute;
+	position: relative;
 	z-index: 9999;
 	width: 100%;
 	height: 110px;
@@ -108,7 +108,7 @@ nav.site-header {
 		//background-color: green;
 		ul.main-nav {
 			position: relative;
-			width: 200px;
+			// width: 200px; // Closses in the nav for column effect
 			top: -1px;
 			display: block;
 			margin: 50px 0 0 0;
@@ -116,7 +116,6 @@ nav.site-header {
 			//border: 1px solid fuchsia;
 			li {
 				position: relative;
-				float: none;
 				background: none;
 				a {
 					font-size: 1.15em;
@@ -151,7 +150,7 @@ nav.site-header {
 			}
 			li.menu-item-has-children:hover > ul.sub-menu {
 				display: block;
-			} 
+			}
 			li.menu-item-has-children a:after {
 				position: relative;
 				float: right;
@@ -194,8 +193,10 @@ nav.site-header {
 // parent nav item hover
 .top-bar-section ul li:hover:not(.has-form)>a {
 	background-color: $solid-red;
+	// opacity: .75;
 }
 // child nav item hover
 .top-bar-section li:not(.has-form) a:not(.button):hover {
 	background-color: $solid-red;
+	opacity: .65;
 }
