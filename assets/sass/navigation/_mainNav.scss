@@ -134,6 +134,7 @@ nav.site-header {
 @media only screen and (min-width: $small-breakpoint) {
 	nav.site-header {
 		height: 95px;
+		margin: 0 0 48px 0;
 		//display: none;
 		//background-color: green;
 		.site-branding {
@@ -141,16 +142,21 @@ nav.site-header {
 			// border: 1px solid orange;
 		}
 		.main-navigation.top-bar-section {
+			position: relative;
+	    height: 47px;
+	    top: 95px;
+			border-bottom: 1px solid #777;
+			// left: auto !important;
 			// border: 1px solid red;
-			left: auto !important;
 		}
 		ul.main-nav {
-			position: relative;
+			position: absolute;
 			// width: 200px; // Closses in the nav for column effect
 			top: 0px;
 			display: block;
-			margin: 49px 0 0 145px;
+			margin: 0 0 0 0;
 			padding: 0 0 0 0;
+			right: 8.33%;
 			// background-image: url("assets/imgs/concrete.png");
 			// border: 1px solid fuchsia;
 			li {

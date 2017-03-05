@@ -49,7 +49,7 @@
 			</ul>
 		</div><!-- .site-branding -->
 		<!-- <div class="site-navigation-derp columns medium-3 medium-pull-1"></div> -->
-		<div class="main-navigation top-bar-section columns small-12 medium-6 medium-pull-1" role="navigation">
+		<div class="main-navigation top-bar-section" role="navigation">
 			<?php wp_nav_menu( array(
 				'theme_location' => 'primary',
 				'menu' => 'Primary Menu',
