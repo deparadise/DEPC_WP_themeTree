@@ -36,10 +36,9 @@
 }
 
 @mixin text-shadows {
-	text-shadow: 3px 3px 10px #555;
+	text-shadow: 4px 4px 5px #222;
 }
 
 @mixin font-1 {
 	font-family: $font__main;
 }
-

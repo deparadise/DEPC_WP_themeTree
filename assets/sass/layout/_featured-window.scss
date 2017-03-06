@@ -1,14 +1,16 @@
 .featured-window {
 	position: relative;
-	// height: 400px;
+	min-height: 150px;
+	max-height: 300px;
+	height: 300px;
 	overflow: hidden;
+	border: 1px solid transparent;
 	// border: 1px solid fuchsia;
 	img {
-		// During mobile
-		//height: 400px; 
-		//max-width: 200%;
-
-
+		width: auto;
+		height: 100%;
+		left: 8.33%;
+		position: relative;
 	}
 	.img-screen {
 		position: absolute;
@@ -21,7 +23,7 @@
 	}
 	.entry-header, .home-page-header {
 		position: absolute;
-		bottom: 50px;
+		bottom: 10px;
 		color: #fff;
 		//border: 1px solid red;
 		h1 {
@@ -38,11 +40,7 @@
 ///
 @media #{$small-up} {
 	.featured-window {
-		img {
-			max-width: 200%;
-			height: auto;
-			width: 140%;
-		}
+
 	}
 	.single .featured-window {
 		height: 400px;
@@ -56,11 +54,6 @@
 
 @media #{$medium-only} {
 	.featured-window {
-		img {
-			max-width: 300%;
-			width: 100%;
-			height: auto;
-		}
 	}
 	.single .featured-window {
 		img {
@@ -71,10 +64,7 @@
 
 @media #{$large-up} {
 	.featured-window {
-		max-height: 700px;
-		img {
-			width: 100%;
-		}
+		max-height: 400px;
 	}
 	.single .featured-window {
 		img {
@@ -83,7 +73,7 @@
 	}
 }
 
-/// Archive 
+/// Archive
 
 .archive .featured-window {
 	height: 200px;
@@ -97,4 +87,3 @@
 		color: #fff;
 	}
 }
-
