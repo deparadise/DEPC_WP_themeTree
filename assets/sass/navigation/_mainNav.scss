@@ -157,9 +157,11 @@ nav.site-header {
 			margin: 0 0 0 0;
 			padding: 0 0 0 0;
 			right: 8.33%;
+			text-align: center;
 			// background-image: url("assets/imgs/concrete.png");
 			// border: 1px solid fuchsia;
 			li {
+				width: 150px;
 				position: relative;
 				background: none;
 				a {
@@ -167,19 +169,25 @@ nav.site-header {
 					background: none;
 				}
 				ul.sub-menu {
-					position: absolute;
+					position: relative;
 					top: 0px;
-					right: 200px;
-					width: 200px;
+					// right: 200px;
+					// width: 200px;
 					padding-left: 0;
-					padding-right: 2px;
+					padding-right: 0;
 					display: none;
 					z-index: 1;
 					//border: 1px solid orange;
 					li {
+						width: 100%;
 						//width: 175px;
 						a {
+							display: block;
+							width: 100%;
+							padding: 12px 10px;
 							background-color: $solid-red;
+							overflow: hidden;
+							line-height: 1.25em;
 						}
 						a:after {
 							content: none;
@@ -187,9 +195,13 @@ nav.site-header {
 					}
 				}
 				ul.sub-menu ul.sub-menu {
+					position: absolute;
 					display: none;
-					top: 0px;
-					left: -200px;
+					width: 150px;
+					// top: -45px;
+					left: -150px;
+					text-align: left;
+					border-right: 1px solid #777;
 					//border: 1px solid orange;
 				}
 			}
@@ -218,7 +230,7 @@ nav.site-header {
 				display: block;
 				height: 0;
 				width: 0;
-				top: 18px;
+				top: 7px;
 				left: -5px;
 				border-color: rgba(255,255,255,.4) transparent transparent;
 				border-top-style: solid;
