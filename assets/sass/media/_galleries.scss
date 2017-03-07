@@ -1,22 +1,28 @@
 .gallery {
-	overflow: hidden;
-	margin-bottom: 1.5em;
-	padding: 2em 2em;
-	//border: 1px solid red;
-	figure.gallery-item {
-		float: left;
-		height: 150px;
-
-		//border-radius: 80px;
+	.gallery {
+		// max-width: 167px;
 		overflow: hidden;
-		//border: 1px solid blue;
-		.gallery-icon {
-			padding: 0;
-			//border: 1px solid fuchsia;
-			a {
-				//border: 1px solid red;
-				img {
-					//margin-bottom: 0;
+		margin-bottom: 1.5em;
+		// padding: 2em 2em;
+		// border: 1px solid red;
+		figure.gallery-item {
+			float: left;
+			margin: 0 5px;
+			// height: 150px;
+
+			//border-radius: 80px;
+			overflow: hidden;
+			//border: 1px solid blue;
+			.gallery-icon {
+				padding: 0;
+				//border: 1px solid fuchsia;
+				a {
+					//border: 1px solid red;
+					img {
+						width: 110px;
+						//margin-bottom: 0;
+						// border: 1px solid fuchsia;
+					}
 				}
 			}
 		}
