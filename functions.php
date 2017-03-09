@@ -216,4 +216,4 @@ require get_template_directory() . '/func_modules/ACF_partners_display.php';
 require get_template_directory() . '/func_modules/ACF_event_date.php';
 
 /* ACF: Testimonial Fields */
-require get_template_directory() . '/func_modules/ACF_testimonial_fields.php';
+// require get_template_directory() . '/func_modules/ACF_testimonial_fields.php';

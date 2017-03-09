@@ -1,0 +1,29 @@
+.archive {
+	article.testimonial {
+		border: none;
+		// border: 1px solid red;
+		.post-featured-thumbnail {
+			width: 100px;
+		}
+		.content-description {
+			width: 80%;
+			.paraphrase {
+				// border: 1px solid purple;
+			}
+			.comment {
+				font-size: 1.5em;
+				// border: 1px solid orange;
+			}
+			.cite {
+				text-align: right;
+				// border: 1px solid green;
+			}
+			.entry-footer {
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				text-align: right;
+			}
+		}
+	}
+}

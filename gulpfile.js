@@ -64,7 +64,8 @@
 	//  Designate dev php files
 	var staticPHP = [
 		'./**/*.php',
-		'./func_modules/*.php'
+		'./func_modules/*.php',
+		'./template-parts/*.php'
 	];
 
 // TARGET COMPOENTS
