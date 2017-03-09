@@ -62,7 +62,10 @@
 	// Designate dev js files
 	var scriptSources = ['assets/jsDev/*.js'];
 	//  Designate dev php files
-	var staticTemplates = ['./**/*.php'];
+	var staticPHP = [
+		'./**/*.php',
+		'./func_modules/*.php'
+	];
 
 // TARGET COMPOENTS
 	var buildComponents = [
@@ -125,7 +128,7 @@
 				}, selectedReloadDelay);
 			});
 		// Templates
-		gulp.watch(staticTemplates)
+		gulp.watch(staticPHP)
 			.on('change', browserSync.reload);
 		// Scripts
 		gulp.watch(scriptSources, ['combine_js'])
