@@ -196,14 +196,15 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /// CUSTOM FUNCTION MODULES
-
-/* Event Post Type */
-require get_template_directory() . '/func_modules/event_post_type.php';
-
 /* User Admin Menu Control */
 require get_template_directory() . '/func_modules/admin_menu_control.php';
 
+/* Testimonial Post Type */
+require get_template_directory() . '/func_modules/testimonial_post_type.php';
+
 /// ACF CONTENT SUPPORT MODULES
+/* ACF: Simple Slider */
+require get_template_directory() . '/func_modules/ACF_simple_slider.php';
 
 /* ACF: Tagline */
 require get_template_directory() . '/func_modules/ACF_tagline.php';
@@ -214,5 +215,5 @@ require get_template_directory() . '/func_modules/ACF_partners_display.php';
 /* ACF: Event Date */
 require get_template_directory() . '/func_modules/ACF_event_date.php';
 
-/* ACF: Simple Slider */
-require get_template_directory() . '/func_modules/ACF_simple_slider.php';
+/* ACF: Testimonial Fields */
+require get_template_directory() . '/func_modules/ACF_testimonial_fields.php';
