@@ -1,8 +1,10 @@
 .social-CTA {
 	padding: 0 1em 0 1em;
 	color: #fff;
+	// border: 1px solid red;
 	.row {
 		//text-align: center;
+		// border: 1px solid green;
 	}
 	h1, h2, h3, h4, h5, h6 {
 		color: #fff;
@@ -16,6 +18,9 @@
 		list-style: none;
 		li {
 			//float: left;
+			padding: 0 0;
+			width: 60px;
+			// border: 1px solid blue;
 		}
 	}
 	.social-links {
@@ -24,9 +29,12 @@
 		    display: block;
 		    width: 60px;
 		    height: 60px;
-		    margin: 0 auto 0;
-		    border-radius: 30px;
-		    font-size: 50px;
+		    margin: 0 0;
+				padding: 0 0;
+		    // border-radius: 30px;
+				font-size: 3em;
+				border: none;
+				// border: 1px solid fuchsia;
 		}
 		a::before {
 			position: absolute;
@@ -40,12 +48,8 @@
 
 @media only screen and (min-width: 40.0625em) {
 	.social-CTA {
-		position: relative;
-		float: left;
-		clear: left;
-		width: 41.66667%;
-		left: 50%;
-		right: auto;
-		top: 45px;
+		// position: relative;
+		// width: 41.66667%;
+		// border: 1px solid red;
 	}
 }
