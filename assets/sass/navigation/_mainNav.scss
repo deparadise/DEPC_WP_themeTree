@@ -43,7 +43,7 @@ nav.site-header {
 	position: relative;
 	z-index: 9999;
 	width: 100%;
-	height: 110px;
+	height: 116px;
 	//top: 35px;
 	//border-top: 1px solid white;
 	border-bottom: 1px solid #777;
@@ -61,8 +61,20 @@ nav.site-header {
 			//border: 2px solid red;
 		}
 	}
+	.tagline {
+		height: 40px;
+		overflow: hidden;
+		// border: 1px solid #bada55;
+		.tag {
+			display: block;
+			font-size: .5em;
+			text-align: right;
+			opacity: .65;
+		}
+	}
 	.site-branding {
 		display: block;
+		height: 75px;
 		// border: 1px solid fuchsia;
 		li {
 			h1 {
@@ -93,7 +105,7 @@ nav.site-header {
 		}
 	}
 	ul.main-nav {
-		margin: 70px 0 0 0;
+		margin: 10px 0 0 0;
 		// border-bottom: 1px solid #777;
 		display: none;
 		li {
@@ -133,7 +145,7 @@ nav.site-header {
 // DESKTOP .main-nav
 @media only screen and (min-width: $small-breakpoint) {
 	nav.site-header {
-		height: 95px;
+		// height: 95px;
 		margin: 0 0 48px 0;
 		//display: none;
 		//background-color: green;
@@ -144,7 +156,7 @@ nav.site-header {
 		.main-navigation.top-bar-section {
 			position: relative;
 	    height: 47px;
-	    top: 95px;
+	    top: 116px;
 			border-bottom: 1px solid #777;
 			// left: auto !important;
 			// border: 1px solid red;

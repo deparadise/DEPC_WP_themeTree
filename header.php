@@ -35,12 +35,15 @@
 
 	<!-- FOUNDATION TOPBAR responsive nav -->
 	<nav id="masthead" class="site-header top-bar row" data-topbar>
+		<div class="tagline columns small-10 small-push-1">
+			<span class="tag"><h1><?php bloginfo( 'description' ) ?></h1></span>
+		</div>
 		<div class="site-branding columns medium-3 medium-push-1">
 			<ul class="title-area">
 				<li class="name site-title">
 					<h1>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img class="logo" src="<?php bloginfo('template_url');?>/assets/imgs/uiPromos_logo.png" alt="hick-up">
+							<img class="logo" src="<?php bloginfo('template_url');?>/assets/imgs/uiPromos_logo.png" alt="Unique Impressions Promotional Products">
 							<!-- <img class="logo-type" src="<?php //bloginfo('template_url');?>/assets/imgs/WreckCheck_Logo_Type.png" alt="<?php //bloginfo( 'name' ); ?>"> -->
 						</a>
 					</h1>
